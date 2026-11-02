@@ -887,3 +887,35 @@ details.fallback .prompt {
     grid-template-columns: 1fr;
   }
 }
+
+/* ── 다운로드 CTA ─── */
+.download-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--lime);
+  color: var(--deep);
+  padding: 14px 22px;
+  border: 2px solid var(--deep);
+  border-radius: 6px;
+  font-family: 'Pretendard Variable', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  margin: 16px 0;
+  transition: transform 0.1s;
+}
+.download-cta:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--deep);
+}
+.download-cta::before {
+  content: "⬇";
+  font-size: 18px;
+}
+.download-cta .size {
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-left: 6px;
+}
