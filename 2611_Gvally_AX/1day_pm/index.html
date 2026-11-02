@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1일차 오후 · 제안서 만들기 — G밸리 AX</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<a class="home-btn" href="../index.html">◀ 전체 목차</a>
+
+<div class="book">
+
+  <!-- ── 1. 섹션 표지 ── -->
+  <section class="sheet cover active">
+    <div class="cover-inner">
+      <div class="eyebrow">1 D A Y &nbsp; · &nbsp; P M</div>
+      <h1>제안서<br>만들기</h1>
+      <div><span class="tag">클라이언트 맞춤형 PPT 제안서</span></div>
+      <div class="meta">
+        <span>SECTION 02</span>
+        <span>프로젝트에서 체계적으로</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 2. 섹션 지도 ── -->
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">1 DAY · PM</span>
+        <span>섹션 지도</span>
+      </div>
+
+      <h1 class="page-title">오늘의 8 STEPS</h1>
+      <p class="page-sub">
+        오전엔 채팅 하나로 시작했다면, 오후부터는 <span class="highlight">프로젝트</span>에서 체계적으로 합니다.
+        클라이언트가 쌓여도 흐트러지지 않는 구조로요.
+      </p>
+
+      <div class="toc">
+        <h3>FLOW</h3>
+        <ol>
+          <li>Claude 프로젝트 만들기</li>
+          <li>샘플 폴더 다운로드</li>
+          <li>새 세션에 폴더 업로드</li>
+          <li>Claude에게 파일 정리 맡기기</li>
+          <li>마스터 디자인 규칙 추출</li>
+          <li>제안서 텍스트 기획</li>
+          <li>클라이언트별 디자인</li>
+          <li>HTML로 공유하기</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 3. STEP 1: 프로젝트 만들기 ── -->
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">STEP 1</span>
+        <span>프로젝트 만들기</span>
+      </div>
+
+      <h1 class="page-title">작업 공간부터</h1>
+      <p class="page-sub">
+        클라이언트가 여러 명이면 채팅창 하나로는 섞여요.
+        <span class="highlight">프로젝트 하나</span>를 만들고, 클라이언트마다 세션을 쌓아가는 게 깔끔합니다.
+      </p>
+
+      <h2>프로젝트 생성</h2>
+      <p>Claude 좌측 상단 <strong>프로젝트</strong> → <strong>새 프로젝트</strong></p>
+      <ul>
+        <li><strong>이름</strong>: "클라이언트 제안서"</li>
+        <li><strong>목적</strong>: "클라이언트별 맞춤형 제안서 작업 공간" 정도 한 줄</li>
+      </ul>
+
+      <div class="callout">
+        <span class="label">지침은 지금 비워두세요</span>
+        수업 중엔 지침을 안 쓰고 세션에서 바로 시작합니다.
+        나중에 반복 작업이 많아지면 그때 지침에 공통 규칙을 넣으면 돼요.
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 4. STEP 2: 샘플 다운로드 ── -->
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">STEP 2</span>
+        <span>샘플 폴더 다운로드</span>
+      </div>
+
+      <h1 class="page-title">폴더 받기</h1>
+      <p class="page-sub">
+        수업 자료 사이트에서 <span class="highlight">제안서_샘플.zip</span>을 받아서 바탕화면에 압축을 풉니다.
+      </p>
+
+      <h2>샘플 안에 있는 것</h2>
+      <ul>
+        <li>마스터 PNG 2장 (우리 회사 제안서 템플릿)</li>
+        <li>가상 클라이언트 로고 2개 (GreenSquare, BlueLab)</li>
+      </ul>
+
+      <h2>자기 자료 가져오셨다면</h2>
+      <p>샘플 폴더 안에 <strong>자기 클라이언트 로고나 자기 회사 템플릿 PNG</strong>를 추가로 넣어두세요. 수업에서는 섞어서 작업합니다.</p>
+
+      <div class="callout">
+        <span class="label">GitHub에서 받습니다</span>
+        수업 자료는 <strong>GitHub</strong>이라는 공개 저장소에 올려져 있어요.
+        가입·로그인 없이 "Download ZIP" 한 번으로 받아집니다.
+        자료를 쌓고 공유하는 사람에게도 좋은 도구예요. (오후 끝에 간단히 짚습니다)
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 5. STEP 3: 세션에 폴더 업로드 ── -->
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">STEP 3</span>
+        <span>새 세션에 폴더 업로드</span>
+      </div>
+
+      <h1 class="page-title">폴더 통째로<br>Claude에게</h1>
+      <p class="page-sub">
+        STEP 1에서 만든 프로젝트에 <span class="highlight">새 세션</span>을 열고,
+        바탕화면의 폴더를 <strong>통째로 드래그</strong>해서 올립니다.
+      </p>
+
+      <div class="callout">
+        <span class="label">데스크톱 앱이 필요한 이유</span>
+        <strong>폴더를 열어보고 그 안에 새 폴더를 만들고 파일을 이동하는 작업</strong>은 Claude 데스크톱 앱에서만 가능해요.
+        뒷단계에서 Claude가 파일 정리, 클라이언트별 폴더 생성, 결과물 저장까지 하기 때문에 꼭 데스크톱 앱이어야 합니다.
+      </div>
+
+      <h2>세션 이름</h2>
+      <p>세션 이름을 <strong>"제안서 1차"</strong> 또는 날짜 정도로 지어두면, 나중에 클라이언트가 늘어나도 찾기 쉬워요.</p>
+    </div>
+  </section>
+
+  <!-- ── 6. STEP 4: 파일 정리 ── -->
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">STEP 4</span>
+        <span>Claude에게 파일 정리 맡기기</span>
+      </div>
+
+      <h1 class="page-title">정리부터<br>Claude에게</h1>
+      <p class="page-sub">
+        폴더를 통째로 올리면 내용이 섞여 보여요.
+        <span class="highlight">Claude에게 열어보고 정리하라</span>고 시킵니다.
+      </p>
+
+      <div class="prompt">
+<span class="prompt-label">PROMPT</span>
+이 폴더에 뭐가 있는지 봐주고,
+우리 회사 자료와 클라이언트 자료를 각각 폴더로 나눠서 정리해줘.</div>
+
+      <p>Claude가 폴더 안을 열어보고, 로고가 어느 회사 것인지·마스터 PNG가 공용인지 판단해서 구조를 잡아줍니다. 결과가 맘에 들면 다음 단계로, 다르게 묶고 싶으면 말로 요청하세요.</p>
+
+      <h2>작업이 끝나면 이런 모양이 됩니다</h2>
+      <div class="folder-grid">
+        <div class="folder-box">
+          <div class="folder-name">우리 회사</div>
+          <ul>
+            <li>마스터 PNG</li>
+            <li>design.md</li>
+            <li>제안서 내용.md</li>
+          </ul>
+        </div>
+        <div class="folder-box">
+          <div class="folder-name">클라이언트 1</div>
+          <ul>
+            <li>로고</li>
+            <li>PPT 제안서</li>
+            <li>HTML 제안서</li>
+          </ul>
+        </div>
+        <div class="folder-box">
+          <div class="folder-name">클라이언트 2</div>
+          <ul>
+            <li>로고</li>
+            <li>PPT 제안서</li>
+            <li>HTML 제안서</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="folder-note">지금은 로고와 마스터 PNG만 있어요. STEP 5~8을 거치면서 design.md, 제안서 내용, PPT, HTML이 각자 자리에 쌓입니다. 클라이언트가 늘어나면 폴더 하나씩 추가되고요.</p>
+    </div>
+  </section>
+
+  <!-- ── 7. STEP 5: 마스터 디자인 규칙 추출 ── -->
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">STEP 5</span>
+        <span>마스터 디자인 규칙 추출</span>
+      </div>
+
+      <h1 class="page-title">이미지를<br>디자인 규칙으로</h1>
+      <p class="page-sub">
+        우리 회사 마스터 PNG를 그대로 두면 Claude가 보는 느낌만으로 작업해요.
+        <span class="highlight">색·간격·레이아웃을 글로 정리</span>해두면 뒷단계에서 품질이 확 올라갑니다.
+      </p>
+
+      <div class="prompt">
+<span class="prompt-label">PROMPT</span>
+우리 회사 폴더의 이미지에서 보이는 특징을 디자인 규칙으로 만들어줘.
+결과는 그 폴더 안에 design.md 로 저장해줘.</div>
+
+      <p>Claude가 이미지에서 색·위치·반복 요소를 분석해서 글로 정리합니다. 이 파일이 뒷단계에서 "우리 회사 디자인 가이드" 역할을 해요.</p>
+
+      <details class="fallback">
+        <summary>좀 더 깎아보기</summary>
+        <p><strong>규칙이 "파란색 바", "둥근 박스" 같은 말로만 적혔을 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT</span>
+눈대중으로 보지 말고 이미지를 코드로 측정해서 색 코드·좌표·크기를 숫자로 적어줘.</div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ── 8. STEP 6: 제안서 텍스트 기획 ── -->
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">STEP 6</span>
+        <span>제안서 텍스트 기획</span>
+      </div>
+
+      <h1 class="page-title">내용부터<br>구조 있게</h1>
+      <p class="page-sub">
+        디자인 전에 <span class="highlight">무슨 말을 할지</span>부터 정리합니다.
+        우리 회사 설명 몇 줄이면 Claude가 일반 제안서 흐름으로 기획해줘요.
+      </p>
+
+      <div class="prompt">
+<span class="prompt-label">PROMPT</span>
+우리 회사 제안서 텍스트를 기획해줘.
+- 우리 회사: [한 줄 설명]
+- 이번 제안: [무엇을 제안하는지 한 줄]
+- 어필할 부분: [경쟁사와 다른 점]
+
+일반 제안서 구조로 5~6쪽 분량으로 기획해줘.</div>
+
+      <p>Claude가 쪽 구성을 잡아주면 보시고, 섹션별로 수정 요청하면서 다듬어갑니다. 추가 프롬프트는 PPT 디자인 후에 더 넣어도 됩니다.</p>
+
+      <details class="fallback">
+        <summary>좀 더 깎아보기</summary>
+        <p><strong>섹션이 내 사업과 안 맞을 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT</span>
+[섹션 이름] 섹션은 [내용]으로 바꿔줘. 다른 섹션은 그대로.</div>
+        <p><strong>너무 길거나 짧을 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT</span>
+항목은 각 쪽당 3개 이하. 한 줄 넘지 않게.</div>
+        <p><strong>Claude가 결과만 보여주고 파일로 저장은 안 할 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT</span>
+방금 기획한 내용을 우리 회사 폴더에 md 파일로 저장해줘.</div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ── 9. STEP 7: 클라이언트별 디자인 ── -->
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">STEP 7</span>
+        <span>클라이언트별 디자인</span>
+      </div>
+
+      <h1 class="page-title">색은 로고에서,<br>구조는 우리 것으로</h1>
+      <p class="page-sub">
+        클라이언트 로고 색을 가져다 쓰되,
+        <span class="highlight">우리 회사 디자인 구조</span>는 그대로 유지합니다.
+      </p>
+
+      <div class="prompt">
+<span class="prompt-label">PROMPT</span>
+방금 만든 제안서 텍스트를 클라이언트별로 PPT로 만들어줘.
+클라이언트 로고의 대표 색을 쓰고, 우리 회사 마스터 디자인 구조는 그대로 유지해줘.</div>
+
+      <h2>결과를 보고 다듬기</h2>
+      <p>처음엔 <strong>눈으로 보고 자연어로</strong> 요청합니다. 그래도 안 되면 수치로.</p>
+
+      <table class="checklist">
+        <tr>
+          <th>상황</th>
+          <th>이렇게</th>
+        </tr>
+        <tr>
+          <td>클라이언트 색이 너무 많이 들어감</td>
+          <td><code>클라이언트 색은 좀 줄이고, 우리 회사 색을 더 쓰자</code></td>
+        </tr>
+        <tr>
+          <td>글씨가 흐려서 안 읽힘</td>
+          <td><code>글씨가 안 읽혀. 더 진하게</code></td>
+        </tr>
+        <tr>
+          <td>색 비중을 정확히 조정하고 싶을 때</td>
+          <td><code>클라이언트 색 30%, 우리 회사 색 70% 비율로</code></td>
+        </tr>
+      </table>
+
+      <details class="fallback">
+        <summary>좀 더 깎아보기</summary>
+        <p><strong>자연어로 "어울리게" 요청했는데 결과가 반복해서 어긋날 때</strong>는 수치로 요청해보세요.</p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 수치 조정</span>
+제목은 클라이언트 색, 강조 텍스트는 클라이언트 색의 70% 명도,
+배경·구조선·화살표는 우리 회사 색 유지.
+그래프의 핵심 막대 하나만 클라이언트 색으로.</div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ── 10. STEP 8: HTML로 공유하기 ── -->
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">STEP 8</span>
+        <span>HTML로 공유하기</span>
+      </div>
+
+      <h1 class="page-title">PPT 다음은<br>HTML 버전</h1>
+      <p class="page-sub">
+        제안서를 다 만들었으면 이제 <span class="highlight">누구에게 어떻게 보낼지</span> 생각할 차례예요.
+        포맷을 상황에 맞게 선택하는 흐름입니다.
+      </p>
+
+      <h2>어떤 포맷으로 보낼까?</h2>
+      <div class="mermaid-box">
+<pre class="mermaid">
+flowchart TD
+  A["제안서 완성"]
+  B["<span style='color:#FFFDEE'>누구에게 어떻게 보내나?</span>"]
+  C["공식 제출 · 결재 · 입찰<br>→ PDF 파일"]
+  D["대면 미팅 · 인쇄본<br>→ PDF 파일"]
+  E["<span style='color:#FFFDEE'>이메일 · 메신저 · 링크 공유</span>"]
+  F["바로 열어보게<br>모바일에서 가볍게<br>→ HTML 링크"]
+  I["회사 내부<br>수정 가능성<br>→ PPT 원본"]
+
+  A --> B
+  B --> C
+  B --> D
+  B --> E
+  E --> F
+  E --> I
+
+  style A fill:#E3EF26,stroke:#0C342C,stroke-width:2px,color:#0C342C
+  style B fill:#076653,stroke:#076653,color:#FFFDEE
+  style E fill:#076653,stroke:#076653,color:#FFFDEE
+  style C fill:#FFFDEE,stroke:#076653,stroke-width:1.5px,color:#0C342C
+  style D fill:#FFFDEE,stroke:#076653,stroke-width:1.5px,color:#0C342C
+  style F fill:#FFFDEE,stroke:#076653,stroke-width:1.5px,color:#0C342C
+  style I fill:#FFFDEE,stroke:#076653,stroke-width:1.5px,color:#0C342C
+</pre>
+      </div>
+
+      <div class="callout">
+        <span class="label">왜 HTML까지?</span>
+        PDF는 <strong>받는 사람의 수고</strong>를, HTML은 <strong>보내는 사람의 수고</strong>를 줄여요.
+        PDF는 다운로드·뷰어 열기 2단계가 필요하지만, HTML은 링크 하나로 바로 열립니다.
+        둘 다 만들어두면 상황에 맞게 쓸 수 있어요.
+      </div>
+
+      <h2>HTML 제안서 만들기</h2>
+      <div class="prompt">
+<span class="prompt-label">PROMPT</span>
+방금 만든 PPT를 클라이언트별 HTML 제안서로 바꿔줘.
+슬라이드 넘기듯 쪽마다 이동할 수 있게 해주고,
+우리 회사 디자인(design.md)은 그대로 유지해줘.</div>
+
+      <p>Claude가 각 클라이언트 폴더에 HTML 파일을 만들어줍니다. 브라우저에서 바로 열어볼 수 있고, 링크로 공유 가능해요.</p>
+
+      <details class="fallback">
+        <summary>좀 더 깎아보기</summary>
+
+        <p><strong>특정 요소의 크기나 위치를 조정하고 싶을 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT</span>
+[위치/요소]를 지금보다 [N배] 크게 키우고,
+아래 라인을 [기준]과 맞춰줘.</div>
+
+        <p><strong>그래프의 숫자 라벨을 강조하고 싶을 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT</span>
+[쪽 번호] 그래프의 데이터 레이블은 흰색, 두께는 Bold,
+지금보다 숫자 크기 [N배] 정도 키워줘.
+% 기호는 숫자보다 [N%] 크기로.</div>
+
+        <p><strong>HTML이 폴더에 저장되지 않고 채팅에만 나올 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT</span>
+방금 만든 HTML을 각 클라이언트 폴더에 파일로 저장해줘.</div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ── 11. 자주 생기는 문제 ── -->
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">TROUBLESHOOTING</span>
+        <span>자주 생기는 문제</span>
+      </div>
+
+      <h1 class="page-title">막혔을 때</h1>
+
+      <table class="checklist">
+        <tr>
+          <th>증상</th>
+          <th>대처</th>
+        </tr>
+        <tr>
+          <td>폴더가 안 올라감 (파일 하나씩 올라감)</td>
+          <td>웹 Claude예요. 데스크톱 앱에서 열어서 다시</td>
+        </tr>
+        <tr>
+          <td>클라이언트 로고 색이 안 뽑힘</td>
+          <td><code>로고 이미지에서 메인 색을 뽑아줘</code></td>
+        </tr>
+        <tr>
+          <td>이미지로 만들어져서 글이 수정 안 됨</td>
+          <td><code>글씨가 수정되게 도형·텍스트 상자로</code></td>
+        </tr>
+        <tr>
+          <td>글이 박스 밖으로 넘침</td>
+          <td><code>박스에 맞게 글 길이 조정해줘</code></td>
+        </tr>
+        <tr>
+          <td>자연어로 요청해도 자꾸 어긋날 때</td>
+          <td>수치로 명시. 색 비율 %나 명도 숫자</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- ── 12. 용어 사전 ── -->
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">GLOSSARY</span>
+        <span>용어</span>
+      </div>
+
+      <h1 class="page-title">용어 사전</h1>
+
+      <table class="checklist">
+        <tr>
+          <th>용어</th>
+          <th>뜻</th>
+        </tr>
+        <tr>
+          <td>프로젝트</td>
+          <td>Claude 안의 작업 공간. 세션이 여러 개 쌓이는 상위 폴더 같은 것</td>
+        </tr>
+        <tr>
+          <td>세션</td>
+          <td>하나의 대화창. 프로젝트 안에 여러 개 둘 수 있음</td>
+        </tr>
+        <tr>
+          <td>마스터</td>
+          <td>우리 회사 제안서의 기준 디자인 (PNG)</td>
+        </tr>
+        <tr>
+          <td>GitHub</td>
+          <td>자료·코드를 쌓아두고 공유하는 공개 저장소. 보는 사람은 가입 없이 받을 수 있음</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+</div>
+
+<!-- ── 플립북 UI ── -->
+<div class="book-ui">
+  <div class="page-counter">1 / 12</div>
+  <button class="nav-btn prev" aria-label="이전 쪽">◀</button>
+  <button class="nav-btn next" aria-label="다음 쪽">▶</button>
+</div>
+
+<script src="../assets/book.js"></script>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true, theme: 'default', securityLevel: 'loose' });
+</script>
+</body>
+</html>

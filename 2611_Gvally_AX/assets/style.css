@@ -1,0 +1,844 @@
+/* ─────────────────────────────────────────────
+   G밸리 AX 강의자료 — 공통 스타일 v0.2
+   플립북(한 쪽 = 한 개념), 표지 강렬 · 본문 얌전
+   픽셀(Galmuri) + 프리텐다드
+───────────────────────────────────────────── */
+
+@import url('https://cdn.jsdelivr.net/gh/quiple/galmuri/dist/galmuri.css');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css');
+
+:root {
+  --ivory: #FFFDEE;
+  --leaf: #E2FBCE;
+  --lime: #E3EF26;
+  --green: #076653;
+  --deep: #0C342C;
+  --ink: #0C342C;
+  --ink-soft: #2a4a40;
+  --ink-faint: #6b7c74;
+  --rule: #0C342C;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--ivory);
+  color: var(--ink);
+  font-family: 'Pretendard Variable', 'Pretendard', -apple-system, sans-serif;
+  font-weight: 400;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* ─────────────────────────────────────────────
+   플립북 컨테이너
+───────────────────────────────────────────── */
+.book {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.sheet {
+  position: absolute;
+  inset: 0;
+  padding: 56px 72px 100px;
+  background: var(--ivory);
+  color: var(--ink);
+  overflow-y: auto;
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+.sheet.active { display: block; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(12px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ─────────────────────────────────────────────
+   표지 (강렬한 톤)
+───────────────────────────────────────────── */
+.sheet.cover {
+  background: linear-gradient(135deg, var(--lime) 0%, var(--green) 55%, var(--deep) 100%);
+  color: var(--ivory);
+  padding: 0;
+}
+.sheet.cover .cover-inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10%;
+}
+.sheet.cover .eyebrow {
+  font-family: 'Pretendard Variable', sans-serif;
+  font-size: 17px;
+  letter-spacing: 0.3em;
+  color: var(--lime);
+  margin-bottom: 32px;
+}
+.sheet.cover h1 {
+  font-family: 'Galmuri11', monospace;
+  font-size: clamp(44px, 7vw, 88px);
+  line-height: 1.15;
+  margin: 0 0 32px;
+  color: var(--ivory);
+  letter-spacing: -0.01em;
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.15);
+}
+.sheet.cover .tag {
+  display: inline-block;
+  background: var(--lime);
+  color: var(--deep);
+  padding: 10px 20px;
+  font-family: 'Pretendard Variable', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 0.02em;
+}
+.sheet.cover .meta {
+  position: absolute;
+  bottom: 100px;
+  left: 10%;
+  right: 10%;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  font-family: 'Pretendard Variable', sans-serif;
+  font-size: 14px;
+  color: var(--leaf);
+  letter-spacing: 0.2em;
+}
+
+/* ─────────────────────────────────────────────
+   본문 쪽 (얌전한 톤)
+───────────────────────────────────────────── */
+.sheet .page-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.page-folio {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--rule);
+  margin-bottom: 40px;
+  font-family: 'Pretendard Variable', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  color: var(--green);
+}
+.page-folio .section-tag {
+  color: var(--deep);
+  font-weight: 700;
+}
+
+h1.page-title {
+  font-family: 'Galmuri11', monospace;
+  font-size: clamp(32px, 4vw, 44px);
+  line-height: 1.25;
+  margin: 0 0 20px;
+  color: var(--deep);
+  letter-spacing: -0.01em;
+}
+
+.page-sub {
+  font-family: 'Pretendard Variable', sans-serif;
+  font-size: 19px;
+  color: var(--ink-soft);
+  margin: 0 0 36px;
+  line-height: 1.6;
+}
+
+h2 {
+  font-family: 'Galmuri11', monospace;
+  font-size: 24px;
+  line-height: 1.3;
+  margin: 48px 0 16px;
+  color: var(--deep);
+}
+
+h3 {
+  font-family: 'Pretendard Variable', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  margin: 32px 0 12px;
+  color: var(--green);
+}
+
+p {
+  font-size: 19px;
+  line-height: 1.75;
+  margin: 0 0 16px;
+  color: var(--ink);
+  text-wrap: pretty;
+}
+
+strong { font-weight: 600; color: var(--deep); }
+
+/* ── 하이라이트 띠 ─── */
+.highlight {
+  display: inline-block;
+  background: var(--lime);
+  color: var(--deep);
+  padding: 2px 10px;
+  font-weight: 600;
+}
+
+/* ── 프롬프트 블록 ─── */
+.prompt {
+  background: var(--deep);
+  color: var(--ivory);
+  padding: 24px 28px;
+  margin: 24px 0 32px;
+  font-family: 'Pretendard Variable', sans-serif;
+  font-size: 18px;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: keep-all;
+  position: relative;
+  border-left: 6px solid var(--lime);
+}
+.prompt-label {
+  display: inline-block;
+  background: var(--lime);
+  color: var(--deep);
+  font-family: 'Pretendard Variable', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  padding: 4px 10px;
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+.prompt-note {
+  font-size: 17px;
+  color: var(--ink-soft);
+  margin: -20px 0 32px;
+  padding: 12px 16px;
+  background: var(--leaf);
+  border-left: 4px solid var(--green);
+  line-height: 1.6;
+}
+
+/* ── 체크리스트 표 ─── */
+table.checklist {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0 32px;
+  font-family: 'Pretendard Variable', sans-serif;
+  font-size: 17px;
+}
+table.checklist th {
+  background: var(--green);
+  color: var(--ivory);
+  padding: 12px 14px;
+  text-align: left;
+  font-family: 'Pretendard Variable', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+}
+table.checklist td {
+  padding: 14px;
+  border-bottom: 1px solid var(--leaf);
+  vertical-align: top;
+  line-height: 1.6;
+}
+table.checklist tr:nth-child(odd) td { background: var(--leaf); }
+table.checklist td:first-child { width: 48%; color: var(--ink-soft); }
+table.checklist td code {
+  font-family: 'Pretendard Variable', sans-serif;
+  font-size: 16px;
+  background: var(--deep);
+  color: var(--ivory);
+  padding: 3px 10px;
+  border-radius: 0;
+}
+
+/* ── 콜아웃 ─── */
+.callout {
+  background: var(--leaf);
+  border-left: 6px solid var(--green);
+  padding: 18px 22px;
+  margin: 24px 0;
+  font-size: 18px;
+  line-height: 1.7;
+}
+.callout .label {
+  display: inline-block;
+  background: var(--green);
+  color: var(--ivory);
+  padding: 3px 10px;
+  font-family: 'Pretendard Variable', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+/* ── 목차 ─── */
+.toc {
+  background: var(--leaf);
+  padding: 32px 36px;
+  margin: 32px 0;
+}
+.toc h3 {
+  margin: 0 0 20px;
+  font-family: 'Pretendard Variable', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.25em;
+  color: var(--green);
+  font-weight: 700;
+}
+.toc ol {
+  margin: 0;
+  padding-left: 24px;
+  font-family: 'Pretendard Variable', sans-serif;
+  font-size: 19px;
+  line-height: 2.2;
+  color: var(--deep);
+}
+.toc ol li { font-weight: 500; }
+
+/* ─────────────────────────────────────────────
+   플립북 UI (쪽 번호 + 넘김 버튼)
+───────────────────────────────────────────── */
+.book-ui {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  z-index: 100;
+}
+
+.page-counter {
+  background: var(--deep);
+  color: var(--ivory);
+  padding: 8px 14px;
+  font-family: 'Pretendard Variable', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  margin-right: 8px;
+}
+
+.nav-btn {
+  background: var(--green);
+  color: var(--ivory);
+  border: none;
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  font-family: 'Pretendard Variable', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-btn:hover:not(:disabled) {
+  background: var(--deep);
+}
+.nav-btn:disabled {
+  background: var(--ink-faint);
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+/* 표지에서는 UI 색 반전 */
+.sheet.cover ~ .book-ui .nav-btn,
+.book[data-current="1"] .nav-btn {
+  background: var(--deep);
+}
+
+/* 상단 홈 버튼 */
+.home-btn {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  background: var(--deep);
+  color: var(--ivory);
+  padding: 8px 14px;
+  font-family: 'Pretendard Variable', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  border: none;
+  z-index: 100;
+}
+.home-btn:hover { background: var(--green); }
+
+/* 섹션 탐색 (목차에서 각 쪽으로) */
+.chapter-link {
+  display: block;
+  padding: 20px 24px;
+  background: var(--leaf);
+  color: var(--deep);
+  text-decoration: none;
+  margin-bottom: 12px;
+  border-left: 6px solid var(--green);
+  font-family: 'Pretendard Variable', sans-serif;
+  transition: all 0.15s;
+}
+.chapter-link:hover {
+  background: var(--lime);
+  border-left-color: var(--deep);
+}
+.chapter-link .num {
+  font-family: 'Pretendard Variable', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  color: var(--green);
+  display: block;
+  margin-bottom: 4px;
+}
+.chapter-link .title {
+  font-size: 22px;
+  font-weight: 600;
+}
+.chapter-link.wip {
+  opacity: 0.5;
+}
+.chapter-link.wip .num::after {
+  content: " · 작성 중";
+}
+
+/* ─────────────────────────────────────────────
+   모바일 대응 (가로폭 ≤ 720px)
+───────────────────────────────────────────── */
+@media (max-width: 720px) {
+
+  /* 쪽 패딩 축소 */
+  .sheet {
+    padding: 32px 20px 100px;
+  }
+
+  /* 표지 */
+  .sheet.cover .cover-inner {
+    padding: 0 24px;
+  }
+  .sheet.cover h1 {
+    font-size: clamp(32px, 9vw, 56px);
+  }
+  .sheet.cover .meta {
+    bottom: 90px;
+    left: 24px;
+    right: 24px;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    gap: 10px;
+  }
+  .sheet.cover .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    margin-bottom: 20px;
+  }
+  .sheet.cover .tag {
+    font-size: 15px;
+    padding: 8px 14px;
+  }
+
+  /* 본문 쪽 */
+  .page-folio {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    margin-bottom: 24px;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  h1.page-title {
+    font-size: clamp(24px, 7vw, 36px);
+    line-height: 1.2;
+  }
+
+  .page-sub {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+
+  h2 {
+    font-size: 19px;
+    margin: 32px 0 12px;
+  }
+
+  h3 {
+    font-size: 16px;
+    margin: 24px 0 10px;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  /* 프롬프트 블록 — 가로 스크롤 방지, 글자 축소 */
+  .prompt {
+    padding: 16px 18px;
+    padding-right: 50px;
+    font-size: 13px;
+    line-height: 1.7;
+    overflow-x: auto;
+    word-break: break-word;
+  }
+  .prompt-label {
+    font-size: 10px;
+    padding: 3px 8px;
+    letter-spacing: 0.15em;
+  }
+  .prompt .copy-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 13px;
+    top: 8px;
+    right: 8px;
+  }
+  .prompt .copy-btn.copied {
+    font-size: 10px;
+    padding: 0 8px;
+  }
+
+  .prompt-note {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+
+  /* 표 — 두 열이 좁아지면 수직 적층 */
+  table.checklist {
+    font-size: 13px;
+  }
+  table.checklist th {
+    padding: 8px 10px;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+  }
+  table.checklist td {
+    padding: 10px;
+    line-height: 1.55;
+  }
+  table.checklist td:first-child {
+    width: 42%;
+  }
+  table.checklist td code {
+    font-size: 12px;
+    padding: 2px 6px;
+    word-break: break-word;
+    white-space: normal;
+    display: inline-block;
+  }
+
+  /* 콜아웃 */
+  .callout {
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+  .callout .label {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+
+  /* 목차 */
+  .toc {
+    padding: 20px 22px;
+  }
+  .toc h3 {
+    font-size: 11px;
+  }
+  .toc ol {
+    font-size: 15px;
+    padding-left: 20px;
+    line-height: 2;
+  }
+
+  /* 챕터 링크 */
+  .chapter-link {
+    padding: 16px 18px;
+  }
+  .chapter-link .num {
+    font-size: 10px;
+  }
+  .chapter-link .title {
+    font-size: 16px;
+  }
+
+  /* 접힌 블록 */
+  details.fallback summary {
+    font-size: 15px;
+    padding: 12px 16px;
+  }
+  details.fallback > *:not(summary) {
+    padding: 0 16px;
+  }
+  details.fallback .prompt {
+    margin: 12px 16px 0;
+  }
+
+  /* 플립북 UI — 좀 더 작게 */
+  .book-ui {
+    bottom: 20px;
+    right: 20px;
+    gap: 6px;
+  }
+  .page-counter {
+    padding: 6px 10px;
+    font-size: 11px;
+    margin-right: 4px;
+  }
+  .nav-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 17px;
+  }
+
+  /* 홈 버튼 */
+  .home-btn {
+    top: 16px;
+    left: 16px;
+    padding: 6px 10px;
+    font-size: 10px;
+  }
+}
+
+/* 아주 좁은 화면 (가로폭 ≤ 420px) — 더 압축 */
+@media (max-width: 420px) {
+  .sheet {
+    padding: 28px 16px 90px;
+  }
+  .sheet.cover h1 {
+    font-size: clamp(28px, 10vw, 44px);
+  }
+  h1.page-title {
+    font-size: clamp(22px, 8vw, 30px);
+  }
+  table.checklist {
+    display: block;
+  }
+  table.checklist thead,
+  table.checklist tbody,
+  table.checklist tr,
+  table.checklist th,
+  table.checklist td {
+    display: block;
+  }
+  table.checklist tr {
+    margin-bottom: 16px;
+    border: 1px solid var(--leaf);
+    padding: 10px;
+  }
+  table.checklist tr:nth-child(odd) td { background: transparent; }
+  table.checklist th {
+    display: none;
+  }
+  table.checklist td {
+    border: none;
+    padding: 6px 0;
+  }
+  table.checklist td:first-child {
+    width: auto;
+    font-weight: 600;
+    color: var(--deep);
+    padding-bottom: 4px;
+    border-bottom: 1px dotted var(--leaf);
+    margin-bottom: 6px;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   인쇄 (PDF 저장) — 한 쪽 = 한 페이지
+───────────────────────────────────────────── */
+@media print {
+  html, body { 
+    height: auto; 
+    overflow: visible;
+    background: white;
+  }
+  .book { height: auto; }
+  .sheet {
+    display: block !important;
+    position: static;
+    page-break-after: always;
+    padding: 20mm 18mm;
+    min-height: 260mm;
+    animation: none;
+  }
+  .sheet.cover {
+    page-break-after: always;
+    min-height: 260mm;
+  }
+  .book-ui, .home-btn { display: none; }
+  .prompt { background: #f0ead8; color: #0C342C; border-left-color: #076653; }
+  .prompt-label { background: #E3EF26; color: #0C342C; }
+}
+
+
+/* ── 접힌 구간 (잘 되지 않을 때) ─── */
+details.fallback {
+  margin: 32px 0 24px;
+  padding: 0;
+  background: var(--leaf);
+  border-left: 6px solid var(--green);
+}
+details.fallback summary {
+  cursor: pointer;
+  padding: 14px 20px;
+  font-family: 'Pretendard Variable', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--deep);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+details.fallback summary::-webkit-details-marker { display: none; }
+details.fallback summary::before {
+  content: '▶';
+  font-size: 11px;
+  color: var(--green);
+  transition: transform 0.15s;
+}
+details.fallback[open] summary::before { transform: rotate(90deg); }
+details.fallback summary:hover { background: rgba(7, 102, 83, 0.08); }
+details.fallback > *:not(summary) {
+  padding: 0 20px;
+}
+details.fallback > p:first-of-type { padding-top: 8px; }
+details.fallback > *:last-child { padding-bottom: 20px; }
+details.fallback .prompt {
+  margin: 16px 20px 0;
+}
+
+
+/* ── 프롬프트 복사 버튼 ─── */
+.prompt { position: relative; padding-right: 56px; }
+.prompt .copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  color: var(--lime);
+  border: 1px solid var(--lime);
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.12s;
+  padding: 0;
+  font-family: 'Pretendard Variable', sans-serif;
+}
+.prompt .copy-btn:hover {
+  background: var(--lime);
+  color: var(--deep);
+}
+.prompt .copy-btn.copied {
+  background: var(--lime);
+  color: var(--deep);
+  width: auto;
+  padding: 0 10px;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+}
+
+
+/* ── 머메이드 다이어그램 박스 ─── */
+.mermaid-box {
+  background: var(--ivory);
+  border: 1px solid var(--leaf);
+  padding: 28px 12px;
+  margin: 24px -20px 32px;
+  overflow-x: auto;
+  text-align: center;
+}
+.mermaid-box .mermaid {
+  display: inline-block;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
+  font-family: 'Pretendard Variable', sans-serif !important;
+}
+/* 조직도 노드 내 글자 — 가독성 높이기 */
+.mermaid-box .mermaid .nodeLabel,
+.mermaid-box .mermaid .label {
+  font-family: 'Pretendard Variable', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+}
+/* 분기 노드(짙은 녹) 글자색 강제 — Mermaid style color가 안 먹을 때 대비 */
+.mermaid-box .mermaid .node rect[style*="#076653"] + .label .nodeLabel,
+.mermaid-box .mermaid .node rect[fill="#076653"] + .label .nodeLabel,
+.mermaid-box .mermaid g.node[id*="B"] .nodeLabel,
+.mermaid-box .mermaid g.node[id*="E"] .nodeLabel { color: #FFFDEE !important; }
+@media (max-width: 720px) {
+  .mermaid-box {
+    padding: 16px 10px;
+    margin: 20px -8px;
+  }
+}
+
+
+/* ── 폴더 구조 도식 (가로 1×3) ─── */
+.folder-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 20px 0 16px;
+}
+.folder-box {
+  background: var(--leaf);
+  border-left: 6px solid var(--green);
+  padding: 16px 18px;
+}
+.folder-box .folder-name {
+  font-family: 'Pretendard Variable', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--deep);
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed var(--green);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.folder-box .folder-name::before {
+  content: "📁";
+  font-size: 15px;
+}
+.folder-box ul {
+  margin: 0;
+  padding-left: 18px;
+  font-family: 'Pretendard Variable', sans-serif;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+.folder-note {
+  font-size: 13px;
+  color: var(--ink-faint);
+  margin-top: 6px;
+}
+
+/* 모바일 — 세로 적층 */
+@media (max-width: 720px) {
+  .folder-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
