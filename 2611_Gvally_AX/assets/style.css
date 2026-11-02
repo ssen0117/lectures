@@ -842,3 +842,48 @@ details.fallback .prompt {
     gap: 10px;
   }
 }
+
+/* ── 케이스 도식 (가로 1×4, STEP 8 포맷 선택) ─── */
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 20px 0 16px;
+}
+.case-box {
+  background: var(--leaf);
+  border-left: 6px solid var(--green);
+  padding: 16px 18px;
+}
+.case-box .case-when {
+  font-family: 'Pretendard Variable', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed var(--green);
+  line-height: 1.5;
+}
+.case-box .case-format {
+  font-family: 'Pretendard Variable', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--deep);
+}
+.case-box .case-format::before {
+  content: "→ ";
+  color: var(--green);
+}
+
+@media (max-width: 720px) {
+  .case-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
+@media (max-width: 420px) {
+  .case-grid {
+    grid-template-columns: 1fr;
+  }
+}
