@@ -1,21 +1,29 @@
-/* 플립북 — 쪽 넘김 (키보드 ◀ ▶ + 버튼) */
+/* 플립북 — 쪽 넘김 (키보드 ◀ ▶ + 버튼 + 쪽 입력 + 섹션 nav) */
 (function() {
   const book = document.querySelector('.book');
   if (!book) return;
   const sheets = Array.from(book.querySelectorAll('.sheet'));
   const prevBtn = document.querySelector('.nav-btn.prev');
   const nextBtn = document.querySelector('.nav-btn.next');
-  const counter = document.querySelector('.page-counter');
+  const pageInput = document.querySelector('.page-counter .page-input');
+  const sectionBtns = document.querySelectorAll('.section-nav button');
   let current = 0;
 
   function render() {
     sheets.forEach((s, i) => s.classList.toggle('active', i === current));
     book.setAttribute('data-current', current + 1);
-    if (counter) counter.textContent = `${current + 1} / ${sheets.length}`;
+    if (pageInput) pageInput.value = current + 1;
     if (prevBtn) prevBtn.disabled = (current === 0);
     if (nextBtn) nextBtn.disabled = (current === sheets.length - 1);
-    // 해시 반영
     history.replaceState(null, '', `#p${current + 1}`);
+  }
+
+  function goTo(pageNumber) {
+    const n = parseInt(pageNumber, 10) - 1;
+    if (isNaN(n) || n < 0 || n >= sheets.length) return;
+    current = n;
+    render();
+    sheets[current].scrollTop = 0;
   }
 
   function go(delta) {
@@ -29,14 +37,29 @@
   if (prevBtn) prevBtn.addEventListener('click', () => go(-1));
   if (nextBtn) nextBtn.addEventListener('click', () => go(1));
 
+  if (pageInput) {
+    pageInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        goTo(pageInput.value);
+        pageInput.blur();
+      }
+    });
+    pageInput.addEventListener('change', () => goTo(pageInput.value));
+  }
+
+  sectionBtns.forEach(btn => {
+    btn.addEventListener('click', () => goTo(btn.dataset.page));
+  });
+
   document.addEventListener('keydown', (e) => {
+    if (document.activeElement && document.activeElement.tagName === 'INPUT') return;
     if (e.key === 'ArrowLeft') go(-1);
     if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); go(1); }
     if (e.key === 'Home') { current = 0; render(); }
     if (e.key === 'End') { current = sheets.length - 1; render(); }
   });
 
-  // 해시로 초기 쪽 지정 (#p3)
   const hash = location.hash.match(/^#p(\d+)$/);
   if (hash) {
     const n = parseInt(hash[1], 10) - 1;

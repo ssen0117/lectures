@@ -324,11 +324,66 @@ table.checklist td code {
 .page-counter {
   background: var(--deep);
   color: var(--ivory);
-  padding: 8px 14px;
+  padding: 8px 12px;
   font-family: 'Pretendard Variable', sans-serif;
   font-size: 16px;
   letter-spacing: 0.1em;
   margin-right: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.page-counter .page-input {
+  background: transparent;
+  border: none;
+  color: var(--ivory);
+  font-family: 'Pretendard Variable', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  width: 42px;
+  text-align: right;
+  padding: 0;
+  -moz-appearance: textfield;
+}
+.page-counter .page-input::-webkit-outer-spin-button,
+.page-counter .page-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.page-counter .page-input:focus {
+  outline: 1px solid var(--lime);
+  background: rgba(227, 239, 38, 0.1);
+}
+
+/* 섹션 네비 (목차) */
+.section-nav {
+  display: flex;
+  gap: 6px;
+  margin-right: 8px;
+}
+.section-nav button {
+  background: var(--ivory);
+  color: var(--deep);
+  border: 1.5px solid var(--deep);
+  padding: 6px 12px;
+  font-family: 'Pretendard Variable', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  letter-spacing: -0.01em;
+}
+.section-nav button:hover {
+  background: var(--lime);
+}
+.section-nav button .range {
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-left: 4px;
+}
+.section-nav button:hover .range {
+  color: var(--deep);
 }
 
 .nav-btn {
@@ -593,6 +648,13 @@ table.checklist td code {
     padding: 6px 10px;
     font-size: 11px;
     margin-right: 4px;
+  }
+  .page-counter .page-input {
+    font-size: 11px;
+    width: 30px;
+  }
+  .section-nav {
+    display: none;
   }
   .nav-btn {
     width: 42px;

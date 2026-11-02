@@ -514,7 +514,7 @@ Claude Browser로 RSS를 직접 읽어오게 만들어줘.</div>
         <span>섹션 지도</span>
       </div>
 
-      <h1 class="page-title">오늘의 8 STEPS</h1>
+      <h1 class="page-title">오늘의 9 STEPS</h1>
       <p class="page-sub">
         오전엔 채팅 하나로 시작했다면, 오후부터는 <span class="highlight">프로젝트</span>에서 체계적으로 합니다.
         클라이언트가 쌓여도 흐트러지지 않는 구조로요.
@@ -531,6 +531,7 @@ Claude Browser로 RSS를 직접 읽어오게 만들어줘.</div>
           <li>제안서 텍스트 기획</li>
           <li>클라이언트별 디자인</li>
           <li>HTML로 공유하기</li>
+          <li>제안서 배포하기</li>
         </ol>
       </div>
     </div>
@@ -576,7 +577,7 @@ Claude Browser로 RSS를 직접 읽어오게 만들어줘.</div>
         아래 버튼으로 <span class="highlight">제안서_샘플.zip</span>을 받아서 바탕화면에 압축을 풉니다.
       </p>
 
-      <a class="download-cta" href="https://github.com/ssen0117/gvally-ax-samples" target="_blank" rel="noopener">
+      <a class="download-cta" href="downloads/제안서_샘플.zip" download>
         제안서_샘플.zip 받기 <span class="size">(약 150KB)</span>
       </a>
 
@@ -874,6 +875,74 @@ Claude Browser로 RSS를 직접 읽어오게 만들어줘.</div>
   <section class="sheet">
     <div class="page-inner">
       <div class="page-folio">
+        <span class="section-tag">STEP 9</span>
+        <span>제안서 배포하기</span>
+      </div>
+
+      <h1 class="page-title">링크로 보낼 수 있게</h1>
+      <p class="page-sub">
+        HTML 제안서를 <span class="highlight">공유 가능한 URL</span>로 띄우는 단계예요.
+        Netlify를 쓰면 Claude가 수정본을 만들어줄 때마다 가볍게 재배포할 수 있어요.
+      </p>
+
+      <h2>Netlify 가입 (1분)</h2>
+      <ol>
+        <li><strong>netlify.com</strong> 접속 → 우측 상단 <strong>Sign up</strong></li>
+        <li><strong>"Sign up with email"</strong> 선택 → Gmail 등 이메일 + 비밀번호 입력</li>
+        <li>받은 메일에서 <strong>확인 링크 클릭</strong> → 가입 완료</li>
+      </ol>
+      <p style="font-size: 13px; color: var(--ink-soft); margin-top: -8px;">
+        ※ Google 1-click 로그인은 지원 안 해요. GitHub 계정 있는 분은 "Sign up with GitHub" 선택하면 10초.
+      </p>
+
+      <h2>배포 — 드래그드롭 4단계</h2>
+      <ol>
+        <li>로그인 후 상단 <strong>"Add new site"</strong> → <strong>"Deploy manually"</strong></li>
+        <li>HTML 파일을 창에 <strong>드래그드롭</strong></li>
+        <li>자동 생성된 URL 확인 (예: <code>graceful-starfish-abc.netlify.app</code>)</li>
+        <li><strong>Site configuration → Change site name</strong> → 알아보기 쉬운 이름으로 변경
+          <br><span style="font-size: 13px; color: var(--ink-soft);">예: <code>greensquare-proposal.netlify.app</code></span>
+        </li>
+      </ol>
+
+      <div class="callout">
+        <span class="label">수정본은 어떻게 반영?</span>
+        해당 사이트 → <strong>Deploys 탭</strong> → 새 HTML 파일 드래그드롭.
+        <strong>URL은 그대로</strong>, 내용만 바뀝니다.
+        Claude가 V2 만들어주면 → Deploys에 드롭 → 끝. commit·push 단계가 없어서 반복이 가볍습니다.
+      </div>
+
+      <h2>선택 옵션</h2>
+      <div class="case-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <div class="case-box">
+          <div class="case-when">견적·조건 등 민감한 내용이 있을 때</div>
+          <div class="case-format">PDF로 보내기</div>
+        </div>
+        <div class="case-box">
+          <div class="case-when">꼭 HTML인데 비공개가 필요할 때</div>
+          <div class="case-format">StaticCrypt</div>
+        </div>
+      </div>
+
+      <p style="margin-top: 8px;">
+        <strong>StaticCrypt</strong> (<a href="https://robinmoisson.github.io/staticrypt/" target="_blank">robinmoisson.github.io/staticrypt</a>) —
+        HTML 파일 올리고 비번 설정하면 비번 걸린 HTML로 변환돼요.
+        그걸 Netlify에 올리고 URL과 비번을 <strong>따로</strong> 전달하면 됩니다.
+        완전 무료, 외부 서버에 자료 안 남음 (브라우저에서 암호화).
+      </p>
+
+      <h2>관리 팁</h2>
+      <ul>
+        <li>안 쓰는 사이트는 <strong>Site configuration → Delete site</strong> 로 정리</li>
+        <li>URL이 길면 <strong>bit.ly</strong> 같은 단축 URL 서비스로 깔끔하게</li>
+        <li><strong>Netlify Drop</strong>(app.netlify.com/drop)이라는 로그인 없는 입구도 있어요 — 24시간 뒤 사라지니 "급하게 한 번 보여줄 때" 용</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
         <span class="section-tag">TROUBLESHOOTING</span>
         <span>자주 생기는 문제</span>
       </div>
@@ -947,7 +1016,14 @@ Claude Browser로 RSS를 직접 읽어오게 만들어줘.</div>
 
 <!-- ── 플립북 UI ── -->
 <div class="book-ui">
-  <div class="page-counter">1 / 26</div>
+  <div class="section-nav">
+    <button type="button" data-page="7">① 뉴스보드 <span class="range">7–14</span></button>
+    <button type="button" data-page="15">② 제안서 <span class="range">15–27</span></button>
+  </div>
+  <div class="page-counter">
+    <input type="number" class="page-input" value="1" min="1" max="27" aria-label="쪽 번호">
+    <span class="total">/ 27</span>
+  </div>
   <button class="nav-btn prev" aria-label="이전 쪽">◀</button>
   <button class="nav-btn next" aria-label="다음 쪽">▶</button>
 </div>
