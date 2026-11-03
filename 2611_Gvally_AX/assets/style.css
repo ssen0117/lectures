@@ -981,3 +981,58 @@ details.fallback .prompt {
   color: var(--ink-soft);
   margin-left: 6px;
 }
+
+/* ── 체크인 질문 (손들기) ─── */
+.checkin-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 24px 0 20px;
+}
+.checkin-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: var(--leaf);
+  border-left: 6px solid var(--green);
+  padding: 18px 22px;
+}
+.checkin-num {
+  font-family: 'Galmuri11', monospace;
+  font-size: 24px;
+  color: var(--green);
+  font-weight: 700;
+  flex-shrink: 0;
+  line-height: 1;
+  padding-top: 4px;
+}
+.checkin-body {
+  flex: 1;
+}
+.checkin-q {
+  font-family: 'Pretendard Variable', sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--deep);
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+.checkin-sub {
+  font-family: 'Pretendard Variable', sans-serif;
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+@media (max-width: 720px) {
+  .checkin-item {
+    padding: 14px 16px;
+    gap: 12px;
+  }
+  .checkin-num {
+    font-size: 20px;
+  }
+  .checkin-q {
+    font-size: 15px;
+  }
+}
