@@ -1036,3 +1036,19 @@ details.fallback .prompt {
     font-size: 15px;
   }
 }
+
+/* ── 자랑 CTA (STEP 4와 5 사이) ─── */
+.share-cta {
+  background: #FFFDEE;
+  border: 2px solid var(--green);
+  color: var(--deep);
+  margin: 20px 0;
+  font-size: 17px;
+}
+.share-cta::before {
+  content: "" !important;
+}
+.share-cta:hover {
+  background: var(--lime);
+  box-shadow: 4px 4px 0 var(--deep);
+}
