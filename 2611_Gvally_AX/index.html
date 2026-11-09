@@ -99,21 +99,17 @@
         2일 과정, 네 개 산출물. 각 섹션을 눌러서 플립북으로 열어보세요.
       </p>
 
-      <a class="chapter-link" href="#p9">
+      <a class="chapter-link" href="#p8">
+        <span class="num">1 DAY · SYSTEM</span>
+        <span class="title">시스템 만들기</span>
+      </a>
+      <a class="chapter-link" href="#p17">
         <span class="num">1 DAY · AM</span>
         <span class="title">뉴스보드 만들기</span>
       </a>
-      <a class="chapter-link" href="#p19">
+      <a class="chapter-link" href="#p27">
         <span class="num">1 DAY · PM</span>
         <span class="title">제안서 만들기</span>
-      </a>
-      <a class="chapter-link wip" href="2day_am/index.html">
-        <span class="num">2 DAY · AM</span>
-        <span class="title">데이터 분석 대시보드</span>
-      </a>
-      <a class="chapter-link wip" href="2day_pm/index.html">
-        <span class="num">2 DAY · PM</span>
-        <span class="title">랜딩 페이지</span>
       </a>
     </div>
   </section>
@@ -223,6 +219,330 @@
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <section class="sheet cover">
+    <div class="cover-inner">
+      <div class="eyebrow">S E C T I O N  0 1</div>
+      <h1>시스템<br>만들기</h1>
+      <div><span class="tag">2시간 · AI + Make</span></div>
+      <div class="meta">
+        <span>SECTION 01</span>
+        <span>내용을 쌓고, 시스템으로 돌리기</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">1 DAY · SYSTEM</span>
+        <span>섹션 지도</span>
+      </div>
+
+      <h1 class="page-title">오늘 만드는<br>2시간 시스템</h1>
+      <p class="page-sub">
+        AI로 <span class="highlight">내용</span>을 만들고,
+        그걸 <span class="highlight">폴더</span>에 쌓고,
+        그걸 <span class="highlight">Make</span>가 돌리게 — 이 세 단계가 "시스템"의 최소 단위입니다.
+      </p>
+
+      <div class="toc">
+        <h3>FLOW</h3>
+        <ol>
+          <li>Make 손풀기 — 검색어로 RSS, Gmail로 받기</li>
+          <li>AI로 Gmail 브리핑</li>
+          <li>뉴스보드 만들기</li>
+          <li>부품 대체 방법 생각해보기</li>
+          <li>우리 회사 제안서 쓰기</li>
+        </ol>
+      </div>
+
+      <div class="callout">
+        <span class="label">오늘의 전제</span>
+        <strong>모든 AI에서 이 방법을 사용할 수 있습니다.</strong>
+        Claude · ChatGPT · Gemini 중 평소 쓰시는 걸로 따라오시면 됩니다. 이 섹션은 Gemini 기준으로 설명하지만, 다른 AI도 동일하게 작동해요.
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">STEP 1</span>
+        <span>Make 손풀기 — 검색어 → RSS → Gmail</span>
+      </div>
+
+      <h1 class="page-title">Make로<br>손 풀어보기</h1>
+      <p class="page-sub">
+        <strong>Make</strong>는 코딩 없이 <span class="highlight">"A가 생기면 B 하기"</span>를 자동화하는 도구예요.
+        오늘 만들 것: "내 관심 검색어 뉴스가 올라오면 Gmail로 알림".
+      </p>
+
+      <h2>Make 가입 / 시나리오 세팅</h2>
+      <ol>
+        <li><strong>make.com</strong> → Sign up → <strong>"Sign up with Google"</strong></li>
+        <li>make 사이트에서 <strong>시나리오 - Scenarios</strong> 클릭</li>
+        <li><strong>RSS - Retrieve RSS feed items</strong></li>
+        <li><strong>Gmail - Send an email</strong> 클릭</li>
+      </ol>
+
+      <h2>RSS 받기</h2>
+      <div class="prompt">
+<span class="prompt-label">PROMPT · RSS 받기</span>
+[관심사] 관련 뉴스를 Make로 받아보고 싶어.
+구글 뉴스 검색 기준 RSS를 만들어줘.</div>
+
+      <p class="prompt-note">
+        <strong>RSS를 잘 찾았는지 확인하려면?</strong> AI가 만들어준 코드를 웹사이트 주소창에 붙여넣어 보세요.
+        문서 틀이 보이면 성공, 깨지면 실패예요 — 다시 돌려보면 됩니다.
+      </p>
+
+      <h2>Gmail 본문</h2>
+      <div class="prompt">
+<span class="prompt-label">PROMPT · Gmail 본문</span>
+Gmail로 보낼 메일 본문을 깔끔하게 만들고 싶어.
+[RSS 항목]에서 다음 정보를 뽑아 넣어줘:
+- 기사 제목 (크게)
+- 채널·출처
+- 올라온 날짜
+- 기사 링크
+
+HTML 간단히 쓸 수 있으면 제목은 굵게,
+링크는 파란색으로 해줘.</div>
+
+      <details class="fallback">
+        <summary>좀 더 깎아보기</summary>
+        <p><strong>중간에 뭘 눌러야 할지 모를 때 — 스크린샷 올리기</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 화면 질문</span>
+[지금 화면 스크린샷 올리기]
+이 화면에서 다음에 뭘 해야 해?</div>
+
+        <p><strong>테스트 결과가 이해 안 될 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 결과 해석</span>
+[Run once 결과 스크린샷 올리기]
+이게 제대로 된 거야? 각 항목이 뭘 의미하는지 알려줘.</div>
+      </details>
+
+      <div class="callout">
+        <span class="label">Make 매뉴얼 안 외워도 됩니다</span>
+        모르면 물어보세요. 막히면 스크린샷 올리세요. 이상하면 "이게 맞아?" 물어보세요.
+        <strong>자동화는 '설정'이 아니라 '대화'</strong>입니다.
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">STEP 2</span>
+        <span>AI로 Gmail 브리핑</span>
+      </div>
+
+      <h1 class="page-title">쌓인 메일,<br>AI에게 묶어서 받기</h1>
+      <p class="page-sub">
+        STEP 1에서 Make가 Gmail에 메일을 쌓았죠. 이제 AI에게
+        <span class="highlight">"오늘 온 거 묶어서 알려줘"</span> 한 줄만 요청하면 끝.
+      </p>
+
+      <h2>왜 Gemini 기준인가</h2>
+      <ul>
+        <li>Google 생태계 안이라 <strong>Gmail을 자동으로 읽어요</strong> (별도 커넥터 설정 X)</li>
+        <li>무료 플랜도 Gmail 연동 지원</li>
+        <li>다른 AI(Claude · ChatGPT)에서 같은 걸 하려면 각자의 Google 커넥터·MCP 세팅이 필요해서 더 복잡</li>
+      </ul>
+
+      <h2>오늘의 브리핑 받기</h2>
+      <div class="prompt">
+<span class="prompt-label">PROMPT · 오늘의 브리핑</span>
+오늘 Gmail에서 [검색어] 관련 메일들 묶어서
+한 페이지 브리핑으로 만들어줘.
+
+- 각 기사의 핵심 포인트 한 줄
+- 반복되는 주제나 흐름
+- 내가 꼭 눌러봐야 할 1~2개</div>
+
+      <h2>주간 흐름으로 묶기</h2>
+      <div class="prompt">
+<span class="prompt-label">PROMPT · 주간 흐름</span>
+지난 일주일 동안 Gmail에서 [검색어] 관련 메일 전체를 보고
+이번 주의 큰 흐름 3가지로 정리해줘.</div>
+
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">STEP 3</span>
+        <span>뉴스보드 만들기</span>
+      </div>
+
+      <h1 class="page-title">열 때마다<br>새로 읽는 신문</h1>
+      <p class="page-sub">
+        쌓인 메일을 그때그때 묶어 보는 것도 좋지만,
+        <span class="highlight">"항상 열면 최신 뉴스가 떠 있는 보드"</span>를 만들어두면 더 편해요. AI 아티팩트 기능으로 바로.
+      </p>
+
+      <h2>기본 보드 만들기</h2>
+      <div class="prompt">
+<span class="prompt-label">PROMPT · 기본 보드</span>
+내 관심사 뉴스를 매일 한 페이지로 모아보고 싶어.
+관심사는 [관심사 2~3개]야.
+열 때마다 최신 뉴스를 새로 읽어오는 웹페이지로 만들어줘.</div>
+
+      <h2>상단 요약 섹션 추가</h2>
+      <div class="prompt">
+<span class="prompt-label">PROMPT · 오늘의 핵심</span>
+보드 상단에 "오늘의 핵심 3가지" 자리를 만들어줘.
+각 지면 기사들을 종합해 내 관심사 기준 핵심 3개.
+
+- 한 줄 헤드라인 + 한 줄 이유
+- 기사 링크 연결
+- 열 때마다 새로 뽑기</div>
+
+      <h2>디자인 조정</h2>
+      <div class="prompt">
+<span class="prompt-label">PROMPT · 디자인</span>
+카드 형식으로 바꿔주고, 섹션별 색을 다르게 해줘.
+전체 톤은 [밝은 신문 느낌] / [다크한 터미널 느낌] 등 자기 취향으로.</div>
+
+      <div class="callout">
+        <span class="label">AI별 차이</span>
+        Claude는 아티팩트, ChatGPT는 Canvas, Gemini는 Canvas 기능이 있어요.
+        모두 "열 때마다 데이터를 새로 읽어오는 웹페이지" 형태로 만들 수 있습니다.
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">STEP 4</span>
+        <span>부품 대체 방법 생각해보기</span>
+      </div>
+
+      <h1 class="page-title">이 시스템은<br>조합일 뿐</h1>
+      <p class="page-sub">
+        방금 만든 시스템은 <strong>"검색어 → Make → 채팅 브리핑"</strong> 세 부품의 조합이에요.
+        각 부품은 <span class="highlight">상황에 맞게 바꿔 끼울 수 있어요.</span>
+      </p>
+
+      <div class="folder-grid">
+        <div class="folder-box">
+          <div class="folder-name">검색어로 RSS</div>
+          <ul>
+            <li>유튜브 채널 RSS</li>
+            <li>블로그 RSS</li>
+            <li>특정 사이트 공개 RSS</li>
+          </ul>
+        </div>
+        <div class="folder-box">
+          <div class="folder-name">Make로 자동 수집</div>
+          <ul>
+            <li>AI에게 바로 "검색해서 가져와줘"</li>
+            <li>Make 없이 즉석으로</li>
+            <li>Zapier·n8n도 같은 역할</li>
+          </ul>
+        </div>
+        <div class="folder-box">
+          <div class="folder-name">채팅으로 브리핑</div>
+          <ul>
+            <li>AI가 스프레드시트에 정리</li>
+            <li>Notion에 저장</li>
+            <li>Slack·Discord로 알림</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout">
+        <span class="label">중요한 건 구조</span>
+        어떤 도구를 쓰느냐가 아니라 <strong>이 구조를 이해하느냐</strong>예요.
+        도구는 계속 바뀌지만, <strong>"수집 → 정리 → 꺼내보기"</strong> 틀은 그대로 유지됩니다.
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">STEP 5</span>
+        <span>우리 회사 제안서 쓰기</span>
+      </div>
+
+      <h1 class="page-title">내용부터 —<br>제안서 초안</h1>
+      <p class="page-sub">
+        디자인 전에 <span class="highlight">"무엇을 말할지"</span>가 먼저.
+        AI에게 구조와 함께 요청하면 1분에 초안이 나와요.
+      </p>
+
+      <h2>기본 기획 (5~6쪽 분량)</h2>
+      <div class="prompt">
+<span class="prompt-label">PROMPT · 기본 기획</span>
+우리 회사의 제안서를 작성해줘.
+- 우리 회사: [한 줄 설명]
+- 이번 제안: [무엇을 제안하는지 한 줄]
+- 어필할 부분: [경쟁사와 다른 점]
+
+일반 제안서 구조로 5~6쪽 분량으로.</div>
+
+      <h2>섹션 수정</h2>
+      <div class="prompt">
+<span class="prompt-label">PROMPT · 섹션 수정</span>
+[섹션 이름] 섹션은 [내용]으로 바꿔줘. 다른 섹션은 그대로.</div>
+
+      <h2>항목 압축</h2>
+      <div class="prompt">
+<span class="prompt-label">PROMPT · 항목 압축</span>
+항목은 각 쪽당 3개 이하. 한 줄 넘지 않게.</div>
+
+      <details class="fallback">
+        <summary>좀 더 깎아보기 — 톤이 안 맞을 때</summary>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 톤 조정</span>
+지금 결과를 [더 격식 있게 / 더 가볍게 / 숫자 넣어 설득력 있게]
+다시 써줘.</div>
+      </details>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">NEXT</span>
+        <span>이 시스템 어디까지 갈 수 있나</span>
+      </div>
+
+      <h1 class="page-title">시스템은<br>씨앗부터</h1>
+      <p class="page-sub">
+        오늘 만든 건 <span class="highlight">시스템의 씨앗</span>이에요.
+        매일 돌리면 한 달 뒤엔 데이터가 쌓여 있고, 그게 <strong>다음 산출물의 재료</strong>가 됩니다.
+      </p>
+
+      <h2>조합 아이디어</h2>
+      <ul>
+        <li><strong>Make 쌓인 뉴스 → AI가 요약 → 주간 리포트</strong></li>
+        <li><strong>쌓인 자료 → AI가 "다음 제안서" 재료로 활용</strong></li>
+        <li>Slack · Discord로 알림 라우팅</li>
+        <li>Notion · 캘린더 등 다른 커넥터로 뻗기</li>
+      </ul>
+
+      <h2>집에서 해볼 때 순서</h2>
+      <ol>
+        <li>오늘 만든 Make 시나리오 1개를 매일 돌아가게 두기</li>
+        <li>1주일 뒤 Gmail에 쌓인 메일로 AI 브리핑 받아보기</li>
+        <li>2주 쌓이면 뉴스보드로 묶어보기</li>
+        <li>필요하면 다른 부품으로 바꿔 끼우기 (STEP 4 참고)</li>
+      </ol>
+
+      <div class="callout">
+        <span class="label">다음 자료들</span>
+        뉴스보드 섹션과 제안서 섹션에서 <strong>더 깊이 다루는 내용</strong>들이 있어요.
+        수업 후 관심 있는 섹션 열어보세요.
+      </div>
     </div>
   </section>
 
@@ -1310,12 +1630,13 @@ A4 1쪽 기준으로 레이아웃 맞춰서 PDF 변환해줘.
 <!-- ── 플립북 UI ── -->
 <div class="book-ui">
   <div class="section-nav">
-    <button type="button" data-page="9">① 뉴스보드 <span class="range">9–18</span></button>
-    <button type="button" data-page="19">② 제안서 <span class="range">19–33</span></button>
+    <button type="button" data-page="8">① 시스템 <span class="range">8–15</span></button>
+    <button type="button" data-page="17">② 뉴스보드 <span class="range">17–26</span></button>
+    <button type="button" data-page="27">③ 제안서 <span class="range">27–38</span></button>
   </div>
   <div class="page-counter">
-    <input type="number" class="page-input" value="1" min="1" max="33" aria-label="쪽 번호">
-    <span class="total">/ 33</span>
+    <input type="number" class="page-input" value="1" min="1" max="41" aria-label="쪽 번호">
+    <span class="total">/ 41</span>
   </div>
   <button class="nav-btn prev" aria-label="이전 쪽">◀</button>
   <button class="nav-btn next" aria-label="다음 쪽">▶</button>
