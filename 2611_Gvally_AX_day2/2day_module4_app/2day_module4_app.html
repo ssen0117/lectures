@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>G밸리 AX — 메모를 앱으로</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="book">
+
+  <!-- 쪽 1: 표지 -->
+  <section class="sheet cover active">
+    <div class="cover-inner">
+      <div class="eyebrow">2 DAY · PM</div>
+      <h1>메모를<br>앱으로</h1>
+      <div><span class="tag">3앱 중 하나 골라서 끝까지</span></div>
+      <div class="meta">
+        <span>MODULE 4</span>
+        <span>CLAUDE + ARTIFACTS · 45분</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 쪽 2: 섹션 지도 + 사전 세팅 -->
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">2 DAY · MODULE 4</span>
+        <span>섹션 지도</span>
+      </div>
+
+      <h1 class="page-title">오늘의 흐름</h1>
+      <p class="page-sub">
+        오늘 끝에는 CS메모로 돌아가는
+        <span class="highlight">작은 업무 앱 하나</span>가 손에 떨어집니다.
+        설명서 한 장 쓰면, 나머지 둘은 복붙 2번이면 끝.
+      </p>
+
+      <div class="toc">
+        <h3>FLOW</h3>
+        <ol>
+          <li>작업 설명서 쓰기 (10분)</li>
+          <li>앱 선택 + 바이브코딩 (20분)</li>
+          <li>다듬고 마무리 (15분)</li>
+        </ol>
+      </div>
+
+      <div class="callout">
+        <span class="label">사전 세팅</span>
+        모듈 3과 같은 <strong>Claude 프로젝트에서 새 세션</strong>을 열고,
+        세션 시작하면 <strong>폴더 접근 권한을 다시 한 번 허용</strong>.
+        CS메모는 Knowledge에 그대로 살아있어서 재업로드는 안 해도 돼요.
+      </div>
+    </div>
+  </section>
+
+  <!-- 쪽 3: STEP 1 작업 설명서 -->
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">STEP 1</span>
+        <span>작업 설명서 쓰기</span>
+      </div>
+
+      <h1 class="page-title">작업 설명서<br>쓰기</h1>
+      <p class="page-sub">
+        "앱 만들어줘" 했는데 <span class="highlight">엉뚱한 거 나온 경험</span>, 한 번쯤 있죠?
+        Claude 탓이 아니라 설명이 부족해서예요.
+        한 번 제대로 써두면, 그 다음부턴 복붙입니다.
+      </p>
+
+      <div class="prompt">
+<span class="prompt-label">STEP 1 · 복사</span>
+프로젝트 지식의 CS메모를 보고,
+내가 [견적서 / 응대 스크립트 / 제안서 프롬프트] 생성기를 만들려고 해.
+아래 3가지를 Claude가 바로 쓸 수 있게 한 장으로 정리해줘.
+
+1. 뭘 만들까
+2. 뭘 넣고 뭘 받을까
+3. 어떤 데이터를 쓸까
+
+다 되면 지금 폴더에 [앱이름]_설명서.md 로 저장해줘.</div>
+
+      <div class="callout">
+        <span class="label">설명서 한 장으로 다음 앱도</span>
+        답만 바꿔 쓰면 끝. 응대 스크립트 만들었으면, 같은 틀에서
+        '뭘 넣고 뭘 받을까'만 바꿔서 제안서용으로.
+      </div>
+
+      <details class="fallback">
+        <summary>좀 더 깎아보기</summary>
+
+        <p><strong>고객 유형별 분기 규칙도 넣고 싶을 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 분기</span>
+고객 유형별로 다르게 나오는 규칙도 한 줄 추가해줘.
+(모듈 3에서 쓴 유형 그대로)</div>
+
+        <p><strong>나중에 봐도 바로 쓸 수 있게</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 예시</span>
+각 항목에 예시 한 줄씩 넣어서,
+나중에 다른 앱 만들 때도 바로 참고할 수 있게.</div>
+      </details>
+
+      <p class="prompt-note">
+        이 설명서, 개발자들은 <strong>PRD</strong>라고 불러요.
+        용어는 몰라도 됩니다 — 이 한 장이 있으면 Claude가 앱을 만듭니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- 쪽 4: STEP 2 앱 선택 + 바이브코딩 -->
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">STEP 2</span>
+        <span>앱 선택 + 바이브코딩</span>
+      </div>
+
+      <h1 class="page-title">뭘 만들지<br>하나 고르기</h1>
+      <p class="page-sub">
+        세 앱 중 하나만 완주해도 OK.
+        <span class="highlight">같은 설명서 틀이니까</span> 나머지 둘은 나중에 복붙.
+      </p>
+
+      <div class="app-cards">
+        <button type="button" class="app-card active" data-app="견적서 생성기">
+          <div class="app-badge">추천</div>
+          <div class="app-icon">💰</div>
+          <div class="app-name">견적서<br>생성기</div>
+          <div class="app-tag">숫자 계산</div>
+        </button>
+        <button type="button" class="app-card" data-app="응대 스크립트 생성기">
+          <div class="app-icon">💬</div>
+          <div class="app-name">응대 스크립트<br>생성기</div>
+          <div class="app-tag">CS 공감</div>
+        </button>
+        <button type="button" class="app-card" data-app="제안서 프롬프트 생성기">
+          <div class="app-icon">✨</div>
+          <div class="app-name">제안서 프롬프트<br>생성기</div>
+          <div class="app-tag">AI 메타</div>
+        </button>
+      </div>
+
+      <div class="prompt">
+<span class="prompt-label">STEP 2 · 복사 (선택한 카드로 바뀜)</span>
+폴더의 <span class="app-slot">견적서 생성기</span>_설명서.md 보고,
+그대로 아티팩트로 만들어줘.</div>
+
+      <details class="fallback">
+        <summary>좀 더 깎아보기</summary>
+
+        <p><strong>고객 유형별 탭이 안 들어갔을 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 유형 탭</span>
+상단에 고객 유형 선택 탭을 넣어줘.
+유형 바꾸면 기본값도 자동으로 바뀌게.</div>
+
+        <p><strong>CS메모의 실제 값을 쓰고 싶을 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 실제 데이터</span>
+기본값·예시 데이터는 CS메모에서 유형별로
+자주 나온 값으로 자동으로 채워줘.</div>
+
+        <p><strong>결과를 바로 쓸 수 있게</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 복사·다운로드</span>
+결과 화면에 "복사" 버튼과 "다운로드" 버튼 추가해줘.</div>
+      </details>
+    </div>
+  </section>
+
+  <!-- 쪽 5: STEP 3 다듬고 마무리 -->
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">STEP 3</span>
+        <span>다듬고 마무리</span>
+      </div>
+
+      <h1 class="page-title">우리 회사 톤으로<br>다듬고 끝</h1>
+      <p class="page-sub">
+        뼈대는 나왔으니 <span class="highlight">우리 회사처럼</span> 보이게 바꾸고,
+        휴대폰에서도 잘 보이게 손봅니다.
+      </p>
+
+      <div class="prompt">
+<span class="prompt-label">STEP 3 · 복사</span>
+우리 회사 로고 색은 [색]이야. 메인 컬러로 바꿔주고,
+전체적으로 좀 더 깔끔하고 단정하게 다듬어줘.
+휴대폰에서 봐도 잘 보이게.</div>
+
+      <details class="fallback">
+        <summary>좀 더 깎아보기</summary>
+
+        <p><strong>입력 칸이 너무 많을 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 입력 간소화</span>
+입력 칸이 너무 많아. 꼭 필요한 것만 남기고
+나머지는 "상세" 접힘으로 숨겨줘.</div>
+
+        <p><strong>우리 팀 느낌을 더 내고 싶을 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 담당자</span>
+결과 화면에 '담당자: OOO' 자리를 추가해서,
+우리 팀 양식처럼 보이게.</div>
+
+        <p><strong>결과를 저장해두고 싶을 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 저장</span>
+생성한 결과를 지금 폴더에 저장하는 기능도 넣어줘.
+파일명은 날짜_고객명.md 로.</div>
+      </details>
+
+      <div class="callout">
+        <span class="label">여기까지 왔다면</span>
+        설명서 한 장으로 앱 하나 만들어봤죠?
+        같은 설명서에서 <strong>'뭘 만들까' '뭘 넣고 뭘 받을까'</strong>만
+        바꾸면 나머지 둘도 같은 방식으로 나와요. 복붙 2번이면 끝.
+      </div>
+
+    </div>
+  </section>
+
+  <section class="sheet cover active">
+    <div class="cover-inner">
+      <div class="eyebrow">MODULE 4 · PUBLISH</div>
+      <h1>진짜 URL로<br>띄우기</h1>
+      <div><span class="tag">임시 링크가 아니라 내가 전달하는 URL로</span></div>
+      <div class="meta">
+        <span>DEPLOY</span>
+        <span>CLOUDFLARE · NETLIFY</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">공통 준비</span>
+        <span>파일명 + 서비스 선택</span>
+      </div>
+
+      <h1 class="page-title">올리기 전에<br>한 가지만</h1>
+      <p class="page-sub">
+        어느 서비스를 쓰든 공통이에요.
+        <span class="highlight">파일 이름을 <code>index.html</code>로</span> 바꿔두세요.
+      </p>
+
+      <h2>파일명을 <code>index.html</code>로</h2>
+      <p>
+        배포 서비스는 도메인 루트에 접속하면 <code>index.html</code>을 찾습니다.
+        이름이 다르면 404 페이지가 떠요.
+      </p>
+      <ol>
+        <li>Claude Artifact에서 다운로드한 HTML 파일을 찾아요</li>
+        <li>파일명을 <strong><code>index.html</code></strong>로 변경</li>
+        <li>이 파일을 서비스에 올리면 됩니다</li>
+      </ol>
+      <p class="prompt-note">
+        여러 파일(이미지·css 등)이 같이 있다면 그 폴더 전체를 올리되,
+        <strong>첫 화면 역할 HTML</strong>이 <code>index.html</code>이어야 해요.
+      </p>
+
+      <h2>서비스 선택 — 둘 다 무료</h2>
+      <div class="case-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <div class="case-box">
+          <div class="case-when">기본 추천 · 차단 적음</div>
+          <div class="case-format">Cloudflare (다음 쪽)</div>
+        </div>
+        <div class="case-box">
+          <div class="case-when">Cloudflare가 안 되거나 익숙한 분</div>
+          <div class="case-format">Netlify (그다음 쪽)</div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <span class="label">왜 두 가지?</span>
+        강의장·회사망에 따라 한쪽이 가끔 막힙니다.
+        <strong>한 쪽이 안 열리면 다른 쪽으로</strong> 바로 옮길 수 있게 둘 다 소개해요.
+        수업에선 하나만 골라서 끝까지 해보면 됩니다.
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">OPTION A</span>
+        <span>Cloudflare로 올리기</span>
+      </div>
+
+      <h1 class="page-title">Cloudflare에<br>올리기</h1>
+      <p class="page-sub">
+        Google 로그인 1분 + 파일 하나 올리면
+        <span class="highlight">공유 가능한 URL</span>이 바로 나와요.
+      </p>
+
+      <h2>가입 (1분)</h2>
+      <ol>
+        <li><a href="https://dash.cloudflare.com/sign-up" target="_blank"><strong>dash.cloudflare.com/sign-up</strong></a> 접속</li>
+        <li>이메일 + 비밀번호로 가입 → 받은 메일에서 <strong>확인 링크 클릭</strong></li>
+      </ol>
+
+      <h2>배포 — 4단계</h2>
+      <ol>
+        <li>좌측 메뉴 <strong>Compute → Workers &amp; Pages</strong> → <strong>Create</strong></li>
+        <li><strong>Upload your static files</strong> 선택</li>
+        <li><code>index.html</code> 파일을 창에 <strong>드래그드롭</strong> → 프로젝트 이름 확인 후 배포</li>
+        <li>우측 상단 <strong>Visit ↗</strong> 버튼으로 내 페이지가 뜨는지 확인
+          <br><span style="font-size:13px; color:var(--ink-soft);">URL 예: <code>floral-butterfly-a6f3.<i>내이름</i>.workers.dev</code></span>
+        </li>
+      </ol>
+
+      <div class="callout">
+        <span class="label">수정본은 어떻게?</span>
+        만든 Worker 화면 → 우측 상단 <strong>New deployment</strong> → 새 <code>index.html</code> 드래그드롭.
+        <strong>URL은 그대로</strong>, 내용만 바뀝니다.
+      </div>
+
+      <details class="fallback">
+        <summary>좀 더 깎아보기</summary>
+        <p><strong>404 "페이지를 찾을 수 없음"이 뜰 때</strong></p>
+        <p>십중팔구 파일명이 <code>index.html</code>이 아니에요. 공통 준비 쪽 확인 후 재업로드.</p>
+
+        <p><strong>이미지·CSS까지 같이 올리고 싶을 때</strong></p>
+        <p>파일 여러 개를 한 번에 드래그하면 그대로 올라갑니다. <code>index.html</code>이 같은 경로에 있으면 돼요.</p>
+
+        <p><strong>URL 이름을 바꾸고 싶을 때</strong></p>
+        <p>Worker 화면 → <strong>Settings</strong> → 프로젝트 이름 변경. URL도 함께 바뀝니다 (기존 URL은 끊어져요).</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">OPTION B</span>
+        <span>Netlify로 올리기</span>
+      </div>
+
+      <h1 class="page-title">Netlify에<br>올리기</h1>
+      <p class="page-sub">
+        <span class="highlight">드래그드롭 한 번</span>으로 URL이 나오는 가장 쉬운 서비스예요.
+        단, 네트워크에 따라 접속이 막히는 경우가 있어요.
+      </p>
+
+      <h2>가입 (1분)</h2>
+      <ol>
+        <li><strong>netlify.com</strong> → 우측 상단 <strong>Sign up</strong></li>
+        <li>이메일 + 비밀번호 입력 → 받은 메일에서 <strong>확인 링크 클릭</strong></li>
+      </ol>
+      <p class="prompt-note">
+        GitHub 계정 있는 분은 "Sign up with GitHub" 선택하면 10초.
+      </p>
+
+      <h2>배포 — 3단계</h2>
+      <ol>
+        <li>로그인 후 상단 <strong>Add new site → Deploy manually</strong></li>
+        <li><code>index.html</code> 파일을 창에 <strong>드래그드롭</strong></li>
+        <li>자동 생성된 URL 확인
+          <br><span style="font-size:13px; color:var(--ink-soft);">URL 예: <code>graceful-starfish-abc.netlify.app</code></span>
+        </li>
+      </ol>
+
+      <div class="callout">
+        <span class="label">수정본은 어떻게?</span>
+        해당 사이트 → <strong>Deploys 탭</strong> → 새 <code>index.html</code> 드래그드롭.
+        <strong>URL은 그대로</strong>, 내용만 바뀝니다.
+      </div>
+
+      <details class="fallback">
+        <summary>좀 더 깎아보기</summary>
+        <p><strong>URL 이름을 알아보기 쉽게 바꾸고 싶을 때</strong></p>
+        <p>사이트 화면 → <strong>Site configuration → Change site name</strong> → 원하는 이름 입력.</p>
+
+        <p><strong>급하게 한 번만 보여주고 싶을 때</strong></p>
+        <p><strong>Netlify Drop</strong> (<a href="https://app.netlify.com/drop" target="_blank">app.netlify.com/drop</a>) — 로그인 없이 드래그드롭, 24시간 뒤 사라짐.</p>
+
+        <p><strong>이 URL이 강의장·회사망에서 안 열릴 때</strong></p>
+        <p>Cloudflare(앞 쪽)로 같은 파일을 올리세요. 같은 결과, 다른 도메인.</p>
+      </details>
+    </div>
+  </section>
+
+</div>
+
+<div class="book-ui">
+  <div class="page-counter">
+    <input type="number" class="page-input" value="1" min="1" max="9" aria-label="쪽 번호">
+    <span class="total">/ 9</span>
+  </div>
+  <button class="nav-btn prev" aria-label="이전 쪽">◀</button>
+  <button class="nav-btn next" aria-label="다음 쪽">▶</button>
+</div>
+
+<script>
+(function(){
+  var cards = document.querySelectorAll('.app-card');
+  var slot = document.querySelector('.app-slot');
+  cards.forEach(function(card){
+    card.addEventListener('click', function(){
+      cards.forEach(function(c){ c.classList.remove('active'); });
+      card.classList.add('active');
+      if (slot) slot.textContent = card.dataset.app;
+    });
+  });
+})();
+</script>
+
+<script src="../assets/book.js"></script>
+</body>
+</html>

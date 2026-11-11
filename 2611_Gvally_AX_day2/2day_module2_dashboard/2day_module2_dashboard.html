@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>G밸리 AX — 메모를 영업 보드로</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="book">
+
+  <section class="sheet cover active">
+    <div class="cover-inner">
+      <div class="eyebrow">2 DAY</div>
+      <h1>메모를<br>영업 보드로</h1>
+      <div><span class="tag">흩어진 상담 메모가 보기 쉬운 보드로</span></div>
+      <div class="meta">
+        <span>MODULE 2</span>
+        <span>CLAUDE PROJECT + ARTIFACTS</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">2 DAY</span>
+        <span>섹션 지도</span>
+      </div>
+
+      <h1 class="page-title">오늘의 흐름</h1>
+      <p class="page-sub">
+        복잡한 메모를 <span class="highlight">다룰 수 있는 모양</span>으로 바꾸고,
+        <span class="highlight">한눈에 보이는 보드</span>로 만들어봅니다.
+      </p>
+
+      <div class="toc">
+        <h3>FLOW</h3>
+        <ol>
+          <li>데이터 파악 + 쉽게 쓸 수 있도록 정리</li>
+          <li>보드로 어떻게 보여줄지 설계</li>
+          <li>만들고 다듬기</li>
+        </ol>
+      </div>
+
+      <div class="callout">
+        <span class="label">오늘의 전제</span>
+        Claude <strong>Pro + Desktop 앱</strong> 기준으로 진행합니다.
+        <strong>Claude 프로젝트</strong>를 새로 만들고 지식에 메모 파일을 등록해둔 뒤 작업을 이어갑니다.
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">STEP 1</span>
+        <span>데이터 파악 → 로우 데이터</span>
+      </div>
+
+      <h1 class="page-title">메모를<br>다룰 수 있는 모양으로</h1>
+      <p class="page-sub">
+        먼저 <span class="highlight">어떤 내용이 들어있는지</span> 알아보고,
+        이어서 <span class="highlight">쓸 수 있는 형태</span>로 정돈합니다.
+      </p>
+
+      <div class="callout">
+        <span class="label">먼저 · 실습 파일 받기</span>
+        <strong>CS 상담 메모</strong> (<code>CS메모_김주임.txt</code>)를 받아서
+        Claude 프로젝트 <strong>Knowledge</strong>에 업로드해두세요.
+        <br><br>
+        <a href="[다운로드 링크 자리]" target="_blank"><strong>⬇ 실습 파일 다운로드</strong></a>
+        <span style="font-size:13px; color:var(--ink-soft);">&nbsp;&nbsp;(수업 때 공유)</span>
+      </div>
+
+      <h2>1-a 어떤 내용인지</h2>
+      <div class="prompt">
+<span class="prompt-label">STEP 1-a · 복사</span>
+방금 올린 CS 상담 메모 어떤 내용들인지 알려줘.</div>
+
+      <p class="prompt-note">
+        한 문장이면 끝. Claude가 전체 구조(어떤 고객·어떤 상담이 섞여있는지)를 요약해줘요.
+      </p>
+
+      <h2>1-b 쉽게 일할 수 있게</h2>
+      <div class="prompt">
+<span class="prompt-label">STEP 1-b · 복사</span>
+이 메모 가지고 더 쉽게 일할 수 있도록
+시각적으로 잘 정리해줘.</div>
+
+      <p class="prompt-note">
+        "어떻게" 정리할지는 말하지 않습니다.
+        Claude가 데이터 성격에 맞는 방식을 알아서 제안해줘요.
+      </p>
+
+      <div class="callout">
+        <span class="label">이 단계의 목표</span>
+        Claude가 "클라이언트별 묶음 + 표" 같은 형태로 보여줄 거예요.
+        이 정돈된 내용이 다음 STEP "영업 현황 보드"의 재료가 됩니다.
+      </div>
+
+      <details class="fallback">
+        <summary>좀 더 깎아보기</summary>
+
+        <p><strong>표에 안 들어갈 메모가 있을 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 노이즈 처리</span>
+표에 안 들어갈 메모(내부 안건, 노이즈 등)가 있으면
+"기타"로 따로 모아줘.</div>
+
+        <p><strong>같은 고객사가 여러 번 나올 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 중복 묶기</span>
+같은 고객사가 여러 번 나오는 경우가 있는데
+한 줄로 묶어서 가장 최근 상황으로 정리해줘.</div>
+
+        <p><strong>영업 건별 진행 단계도 보고 싶을 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 영업 단계</span>
+각 영업 건이 지금 어느 단계인지도 짐작해서 알려줘.</div>
+      </details>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">STEP 2</span>
+        <span>보드 설계</span>
+      </div>
+
+      <h1 class="page-title">뭘 어떻게<br>보여줄지</h1>
+      <p class="page-sub">
+        정리된 데이터로 <span class="highlight">영업 현황을 한눈에 볼 수 있는 보드</span>를 어떻게 꾸밀지 설계합니다.
+      </p>
+
+      <div class="prompt">
+<span class="prompt-label">STEP 2 · 복사</span>
+이 데이터 가지고 영업 현황을 한눈에 볼 수 있는
+보드 아티팩트를 만들려고 해.
+어떤 걸 어떻게 보여주면 좋을지 알려줘.</div>
+
+      <p class="prompt-note">
+        "어떤 걸" = 어떤 숫자나 정보. "어떻게" = 어디에 어떤 모양으로.
+        Claude가 보드 구성을 글로 설계해줍니다. 아직 눈에 보이진 않아요.
+      </p>
+
+      <div class="callout">
+        <span class="label">이 단계의 포인트</span>
+        Claude가 "상단엔 이런 숫자, 중간엔 클라이언트 목록, 하단엔 민원..." 같은 식으로 그림을 그려줄 거예요.
+        이 설계대로 다음 STEP에서 진짜 보드를 만듭니다.
+      </div>
+
+      <details class="fallback">
+        <summary>좀 더 깎아보기</summary>
+
+        <p><strong>지표가 너무 많아 보일 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 좁히기</span>
+핵심 숫자 3~4개만 남기고 나머지는 빼줘.</div>
+
+        <p><strong>영업과 민원을 분리해서 보고 싶을 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 섹션 분리</span>
+영업 쪽이랑 A/S 민원 쪽을 섹션으로 나눠서 보여줘.</div>
+
+        <p><strong>가장 중요한 걸 강조하고 싶을 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 강조</span>
+가장 먼저 봐야 할 숫자부터 큼직하게 보여줘.</div>
+      </details>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">STEP 3</span>
+        <span>만들고 업그레이드</span>
+      </div>
+
+      <h1 class="page-title">진짜 보드로<br>완성하기</h1>
+      <p class="page-sub">
+        설계대로 <span class="highlight">실제로 만들고</span>, 눈으로 보면서 <span class="highlight">다듬고 채웁니다</span>.
+      </p>
+
+      <h2>3-a 만들기</h2>
+      <div class="prompt">
+<span class="prompt-label">STEP 3-a · 복사</span>
+방금 설계한 걸 그대로 만들어줘.</div>
+
+      <p class="prompt-note">
+        Claude가 Artifacts에 대시보드를 눈에 보이게 만들어줘요.
+        처음엔 완벽하지 않아도 괜찮아요. 다음 단계에서 다듬습니다.
+      </p>
+
+      <h2>3-b 보기 좋게 다듬기</h2>
+      <div class="prompt">
+<span class="prompt-label">STEP 3-b · 복사</span>
+좀 더 깔끔하고 단정하게 바꿔줘.</div>
+
+      <p class="prompt-note">
+        "어떻게" 바꾸라고 자세히 말하지 않습니다.
+        Claude가 공간·색·정렬을 알아서 조정해줘요.
+      </p>
+
+      <h2>3-c 빠진 거 채우기</h2>
+      <div class="prompt">
+<span class="prompt-label">STEP 3-c · 복사</span>
+빠진 정보가 있으면 추가하고,
+가장 중요한 숫자는 상단에 큼직하게 보여줘.</div>
+
+      <p class="prompt-note">
+        Claude가 지표 몇 개를 보강하고, 상단 KPI 영역이 자연스럽게 생겨요.
+      </p>
+
+      <div class="callout">
+        <span class="label">여기까지 왔다면</span>
+        메모 한 통이 영업 보드가 됐어요.
+        숫자가 뭘 뜻하는지, 어떤 상황에서 뭘 보면 좋은지는
+        나중에 Claude에게 "이 보드 읽는 법 알려줘"라고 물어보면 됩니다.
+      </div>
+
+      <details class="fallback">
+        <summary>좀 더 깎아보기</summary>
+
+        <p><strong>샘플 보드 레퍼런스가 있을 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 샘플 참고</span>
+https://claude.ai/artifact/6RuGowvftkTLUNuhRy11yN
+이 보드 같은 느낌으로 바꿔줘.</div>
+        <p class="prompt-note" style="margin-top: 12px;">
+          위 링크가 강사가 공유한 샘플 보드예요. 눌러서 열어본 뒤 복붙하면 됩니다.
+        </p>
+
+        <p><strong>특정 부분을 강조하고 싶을 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 강조</span>
+긴급한 민원은 색으로 강조해줘.</div>
+
+        <p><strong>뭘 더 넣어야 할지 모르겠을 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 제안 요청</span>
+이 보드에서 뭘 더 추가하면 좋을지 제안해줘.</div>
+      </details>
+    </div>
+  </section>
+
+</div>
+
+<!-- ── 플립북 UI ── -->
+<div class="book-ui">
+  <div class="page-counter">
+    <input type="number" class="page-input" value="1" min="1" max="5" aria-label="쪽 번호">
+    <span class="total">/ 5</span>
+  </div>
+  <button class="nav-btn prev" aria-label="이전 쪽">◀</button>
+  <button class="nav-btn next" aria-label="다음 쪽">▶</button>
+</div>
+
+<script src="../assets/book.js"></script>
+</body>
+</html>

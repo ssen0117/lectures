@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>G밸리 AX — 메모를 메시지로</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="book">
+
+  <section class="sheet cover active">
+    <div class="cover-inner">
+      <div class="eyebrow">2 DAY</div>
+      <h1>메모를<br>메시지로</h1>
+      <div><span class="tag">같은 메모, 이번엔 고객의 언어로</span></div>
+      <div class="meta">
+        <span>MODULE 3</span>
+        <span>CLAUDE + CHATGPT · GEMINI + ARTIFACTS</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">2 DAY</span>
+        <span>섹션 지도</span>
+      </div>
+
+      <h1 class="page-title">오늘의 흐름</h1>
+      <p class="page-sub">
+        같은 CS메모로 <span class="highlight">고객 유형별 메시지</span>를 뽑고,
+        <span class="highlight">홍보 이미지</span>를 붙여,
+        <span class="highlight">상품 랜딩 페이지</span>를 만듭니다.
+      </p>
+
+      <div class="toc">
+        <h3>FLOW</h3>
+        <ol>
+          <li>고객 유형별 메시지 뽑기 (Claude → 파일 저장)</li>
+          <li>상품·설치 장면 이미지 만들기 (ChatGPT · Gemini)</li>
+          <li>유형 선택형 랜딩 페이지 조립 (Claude Artifacts)</li>
+        </ol>
+      </div>
+
+      <div class="callout">
+        <span class="label">오늘의 전제</span>
+        프로젝트에서 진행합니다.
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">STEP 1</span>
+        <span>메시지 뽑기</span>
+      </div>
+
+      <h1 class="page-title">고객의 말을<br>메시지로 번역</h1>
+      <p class="page-sub">
+        같은 CS메모를 <span class="highlight">고객 유형별 니즈</span>로 다시 보고,
+        그걸로 <span class="highlight">홍보자료에 넣을 메시지</span>를 뽑습니다.
+      </p>
+
+      <h2>1-a 유형별로 다시 보기</h2>
+      <div class="prompt">
+<span class="prompt-label">STEP 1-a · 복사</span>
+CS메모에서 고객 유형별로 자주 나오는
+문제와 니즈를 뽑아줘. 업종별로 묶어서.</div>
+
+      <p class="prompt-note">
+        "업종을 몇 개로 나눠" 지정하지 않습니다.
+        Claude가 데이터에서 자연스럽게 묶음을 찾아줘요.
+      </p>
+
+      <h2>1-b 메시지 세트로 저장</h2>
+      <div class="prompt">
+<span class="prompt-label">STEP 1-b · 복사</span>
+이걸로 우리 회사 상품 홍보자료에 넣을
+고객 유형별 메시지 세트를 만들어줘.
+유형마다 헤드라인·서브 메시지·셀링 포인트 3개씩.
+
+지금 연결된 폴더에 메시지세트.md 로 저장해줘.</div>
+
+      <p class="prompt-note">
+        대화창에 결과 미리보기 + 폴더에 <code>메시지세트.md</code> 파일 생성.
+        다음 단계 재료가 "손에 잡히는 파일"로 남습니다.
+      </p>
+
+      <div class="callout">
+        <span class="label">이 단계의 목표</span>
+        같은 CS메모가 <strong>업종 수만큼의 메시지 묶음</strong>이 됐어요.
+        유형별로 다른 각도로 말을 거는 재료가 생긴 셈입니다.
+      </div>
+
+      <details class="fallback">
+        <summary>좀 더 깎아보기</summary>
+
+        <p><strong>고객이 실제로 쓴 표현을 살리고 싶을 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 인용</span>
+고객이 메모에서 실제로 쓴 표현을
+그대로 인용해서 셀링 포인트에 녹여줘.</div>
+
+        <p><strong>유형별 핵심 키워드 요약도 필요할 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 요약표</span>
+메시지세트.md 상단에
+유형별 핵심 키워드 요약표도 넣어줘.</div>
+
+        <p><strong>너무 많이 나눠졌을 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 통합</span>
+비슷한 유형은 하나로 묶어서 3~4개로 줄여줘.</div>
+      </details>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">STEP 2</span>
+        <span>비주얼 만들기</span>
+      </div>
+
+      <h1 class="page-title">상품·설치 장면<br>이미지 만들기</h1>
+      <p class="page-sub">
+        Claude에게 <span class="highlight">이미지 프롬프트</span>를 뽑아,
+        <span class="highlight">ChatGPT 또는 Gemini</span>에서 실제 이미지를 만듭니다.
+      </p>
+
+      <div class="callout">
+        <span class="label">여기서 잠깐</span>
+        가상 회사라 실제 상품 사진이 없어요. 강사가 미리 준비한
+        <strong>예시 레퍼런스 이미지</strong>(Unsplash)를 씁니다.
+        사무실 돌아가면 <strong>본인 회사 상품 사진</strong> 1~2장으로
+        똑같이 돌리면 됩니다.
+      </div>
+
+      <h2>2-a Claude에게 이미지 프롬프트 요청</h2>
+      <div class="prompt">
+<span class="prompt-label">STEP 2-a · 복사</span>
+방금 뽑은 메시지와 레퍼런스 이미지(ref-01-clean.png)
+분위기를 기반으로, 이미지 생성 AI에 넣을 프롬프트
+두 개를 만들어줘.
+
+ⓐ 우리 상품 샷 — 로고·브랜드명 없이, 중립 흰색 바디
+ⓑ 그 상품을 학교 급식실 또는 식품공장 설비 룸에
+   설치한 장면</div>
+
+      <p class="prompt-note">
+        Claude는 <strong>두뇌(프롬프트 설계)</strong>,
+        이미지 생성 AI는 <strong>손(실행)</strong>.
+        도구마다 잘하는 게 달라서 섞어 씁니다.
+      </p>
+
+      <h2>2-b ChatGPT · Gemini에서 실행</h2>
+      <div class="callout">
+        <span class="label">도구 선택</span>
+        <strong>ChatGPT Plus</strong> 있으면 ChatGPT,
+        없으면 <strong>Gemini (Nano Banana)</strong> 무료로 충분합니다.
+        둘 다 결과물 품질은 비슷해요.
+      </div>
+
+      <p class="prompt-note" style="margin-top:14px;">
+        ① Claude가 만들어준 ⓐ 프롬프트를 복사 →
+        이미지 생성 AI에 <code>ref-01-clean.png</code>와 함께 붙여넣기 →
+        <strong>상품 샷 완성</strong>
+        <br>
+        ② ⓑ 프롬프트 복사 → 방금 만든 상품 샷을 레퍼런스로 올리기 →
+        <strong>설치 장면 완성</strong>
+        <br>
+        ③ 둘 다 다운받아 <code>2day_module3_landing</code> 폴더에 저장
+      </p>
+
+      <details class="fallback">
+        <summary>좀 더 깎아보기</summary>
+
+        <p><strong>일러스트처럼 나올 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 사실감</span>
+프롬프트에 "실제 사진처럼 자연스럽게,
+일러스트 느낌 피해달라" 조건을 포함해줘.</div>
+
+        <p><strong>로고·브랜드명이 자꾸 생길 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 로고 제거</span>
+"로고·텍스트·브랜드명이 생기면 지워달라"
+조건을 프롬프트에 꼭 넣어줘.</div>
+
+        <p><strong>설치 장면에 사람도 넣고 싶을 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 인물 추가</span>
+설치 장면에 작업하는 사람 한 명도 포함되도록
+프롬프트를 조정해줘.</div>
+      </details>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">STEP 3</span>
+        <span>랜딩 조립</span>
+      </div>
+
+      <h1 class="page-title">고객 유형을 고르면<br>메시지가 바뀌는 랜딩</h1>
+      <p class="page-sub">
+        뽑아둔 메시지와 이미지로,
+        <span class="highlight">유형 선택 탭이 있는 랜딩</span>을 만듭니다.
+      </p>
+
+      <h2>3-a 만들기</h2>
+      <div class="prompt">
+<span class="prompt-label">STEP 3-a · 복사</span>
+고객 유형을 선택하면 거기 맞는 메시지가 뜨는
+우리 상품 홍보 페이지를 만들어줘.
+시설팀장이 보고 문의할 만한 톤으로.</div>
+
+      <p class="prompt-note">
+        Claude가 상단 유형 선택기 + 메시지 + 상품 이미지를
+        한 장짜리 홍보 페이지로 조립해줘요.
+      </p>
+
+      <h2>3-b 디테일 이미지 + 정보 추가</h2>
+      <div class="prompt">
+<span class="prompt-label">STEP 3-b · 복사</span>
+다른 이미지(ref-02.jpg)도 하나 더 넣고,
+제품 사양이랑 문의하는 곳도 추가해줘.</div>
+
+      <p class="prompt-note">
+        모든 비주얼을 AI로 만들 필요 없어요.
+        <code>ref-02.jpg</code>처럼 <strong>기성 이미지 그대로</strong>
+        자산으로 넣는 것도 실무에선 흔한 방식입니다.
+      </p>
+
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">STEP 3</span>
+        <span>다듬고 마무리</span>
+      </div>
+
+      <h1 class="page-title">다듬고,<br>마무리</h1>
+      <p class="page-sub">
+        눈으로 보면서 <span class="highlight">깔끔하게 정리</span>하고,
+        오늘의 결과를 손에 쥡니다.
+      </p>
+
+      <h2>3-c 다듬기</h2>
+      <div class="prompt">
+<span class="prompt-label">STEP 3-c · 복사</span>
+좀 더 깔끔하고 단정하게 바꿔주고,
+휴대폰에서 봐도 잘 보이게 해줘.</div>
+
+      <div class="callout">
+        <span class="label">여기까지 왔다면</span>
+        어제 만든 <strong>영업 보드</strong>와 오늘 만든 <strong>홍보 페이지</strong>,
+        같은 CS메모에서 나온 두 산출물이 생겼어요.
+        하나는 <strong>내가 보려고</strong>, 하나는 <strong>고객이 보려고</strong>.
+      </div>
+
+      <h2>3-d (옵션) 휴대폰으로 확인하기</h2>
+      <div class="callout">
+        <span class="label">지금 바로 모바일에서</span>
+        Artifact 상단 <strong>"공유"</strong> 버튼 → <strong>"공개 링크(Publish)"</strong> 선택.
+        생긴 링크를 휴대폰에서 열어보세요.
+        어색한 부분이 있으면 Claude에게 그대로 말해주면 돼요.
+      </div>
+
+      <div class="prompt">
+<span class="prompt-label">STEP 3-d · 복사</span>
+모바일에서 이 부분이 어색해, 고쳐줘.</div>
+
+      <p class="prompt-note">
+        지금 열어본 URL은 <code>claude.ai</code> 주소.
+        클로드가 임시로 공개해주는 <strong>데모 링크</strong>예요.
+        진짜 회사 자산으로 만들려면 — 내 도메인에, 영구로.
+        <strong>모듈 4 끝에서</strong> Cloudflare나 Netlify로 띄워봅니다.
+      </p>
+
+      <details class="fallback">
+        <summary>좀 더 깎아보기</summary>
+
+        <p><strong>적용 사례 섹션을 추가하고 싶을 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 사례</span>
+유형별로 "실제 민원 → 설치 → 해결" 흐름을
+작은 카드로 보여주는 섹션을 추가해줘.</div>
+
+        <p><strong>문의 섹션을 단순하게 하고 싶을 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 문의 단순화</span>
+하단 문의 섹션은 "우리 시설도 상담받고 싶어요"
+버튼 하나로 단순하게 해줘.</div>
+      </details>
+
+      <p class="prompt-note" style="margin-top:20px; font-size:0.85em; opacity:0.7;">
+        레퍼런스 이미지: Unsplash — Rephile Water, Anton Savinov
+      </p>
+    </div>
+  </section>
+
+</div>
+
+<!-- ── 플립북 UI ── -->
+<div class="book-ui">
+  <div class="page-counter">
+    <input type="number" class="page-input" value="1" min="1" max="6" aria-label="쪽 번호">
+    <span class="total">/ 6</span>
+  </div>
+  <button class="nav-btn prev" aria-label="이전 쪽">◀</button>
+  <button class="nav-btn next" aria-label="다음 쪽">▶</button>
+</div>
+
+<script src="../assets/book.js"></script>
+</body>
+</html>

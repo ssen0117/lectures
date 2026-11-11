@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>G밸리 AX — 정보 수집 자동화 시스템 구축</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="book">
+
+  <section class="sheet cover active">
+    <div class="cover-inner">
+      <div class="eyebrow">2 DAY · AM</div>
+      <h1>정보 수집<br>자동화 시스템 구축</h1>
+      <div><span class="tag">매일 아침, 내 Gmail에 리뷰 한 통</span></div>
+      <div class="meta">
+        <span>MODULE 1</span>
+        <span>CLAUDE + MAKE</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">2 DAY · AM</span>
+        <span>섹션 지도</span>
+      </div>
+
+      <h1 class="page-title">오늘의 3 STEPS</h1>
+      <p class="page-sub">
+        오늘 끝에는 매일 아침 내 Gmail로 도착하는 <span class="highlight">리뷰 메일 한 통</span>이 생깁니다.
+      </p>
+
+      <div class="toc">
+        <h3>FLOW</h3>
+        <ol>
+          <li>내 검색어 RSS로 편집</li>
+          <li>메이크 들어가서 시나리오 만들기</li>
+          <li>Text aggregator 추가</li>
+        </ol>
+      </div>
+
+      <div class="callout">
+        <span class="label">오늘의 전제</span>
+        수업 중엔 메일이 내 Gmail로 한 통 들어오는 걸 확인하는 데까지만 갑니다.
+        "매일 아침 자동 발송"으로 켜두는 건 나중에 Claude에게 물어보면 돼요.
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">STEP 1</span>
+        <span>내 검색어 RSS로 편집</span>
+      </div>
+
+      <h1 class="page-title">채팅창에 적기</h1>
+      <p class="page-sub">
+        가볍게 한 문장으로 시작합니다.
+        <span class="highlight">내가 매일 어떤 리뷰를 보고 싶은지</span>를 적는 게 전부예요.
+      </p>
+
+      <h2>1-1 방법 물어보기</h2>
+      <div class="prompt">
+<span class="prompt-label">STEP 1-1 · 복사해서 자기 걸로 바꾸기</span>
+내가 하는 일은 [상품]을 [주요 고객]에 주로 납품하는 일이야.
+우리 상품이나 비슷한 상품에 대한 고객 리뷰·블로그 후기를
+매일 아침 이메일로 자동으로 받아보고 싶어.
+
+관심 키워드 3개 정도를 한꺼번에 받아볼 수 있는 방법을 알려줘.</div>
+
+      <p class="prompt-note">
+        예: "산업용 정수 필터를 학교 급식실·식품공장·병원·관공서에 납품해."<br>
+        본인 업종·상품 자리에 넣기만 하면 됩니다.
+      </p>
+
+      <h2>1-2 링크(주소)로 받기</h2>
+      <p>Claude가 여러 방법을 설명해줄 거예요. 그중 하나를 <span class="highlight">바로 복사해 쓸 수 있는 주소</span>로 달라고 한 번 더 말합니다.</p>
+      <div class="prompt">
+<span class="prompt-label">STEP 1-2 · 복사</span>
+좋아. 방금 알려준 걸 링크나 주소 하나로 만들고 싶어.
+다음 단계에서 Make에 붙여넣을 거니까, 바로 복사해서 쓸 수 있게 줘.
+그리고 RSS 에러나지 않게 미리 한 번 확인도 해줘.</div>
+
+      <div class="callout">
+        <span class="label">이 단계의 포인트</span>
+        Claude가 주소 하나를 알려줄 거예요. 복사해서 다음 단계에 쓰면 돼요.
+        주소가 뭔지, 어떻게 만들었는지는 몰라도 괜찮습니다.
+      </div>
+
+      <details class="fallback">
+        <summary>좀 더 깎아보기</summary>
+
+        <p><strong>다음 단계에서 "주소가 안 읽힌다"는 에러가 떴을 때</strong></p>
+        <p>한글 키워드가 주소에 섞여서 생기는 문제예요. Claude에게 다시 요청하면 돼요.</p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 주소 다시 받기</span>
+방금 준 주소를 Make에서 바로 쓸 수 있게 다시 만들어줘.
+한글이 깨지지 않도록.</div>
+
+        <p><strong>리뷰 말고 뉴스나 업계 동향도 같이 보고 싶을 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 범위 넓히기</span>
+리뷰뿐 아니라 업계 뉴스나 경쟁사 동향도 같이 받고 싶어.
+키워드를 추가해서 주소 다시 만들어줘.</div>
+      </details>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">STEP 2</span>
+        <span>메이크 들어가서 시나리오 만들기</span>
+      </div>
+
+      <h1 class="page-title">자동 발송<br>세팅하기</h1>
+      <p class="page-sub">
+        <strong>Make</strong>(<a href="https://www.make.com/" target="_blank">make.com</a>)는 노코드 자동화 도구예요.
+        Claude가 알려준 주소를 Make에 꽂으면 <span class="highlight">매일 내 Gmail로 메일을 보내주는 로봇</span>이 만들어집니다.
+      </p>
+
+      <h2>가입 (1분)</h2>
+      <ol>
+        <li><strong>make.com</strong> → 우측 상단 <strong>"Get started free"</strong></li>
+        <li><strong>"Sign up with Google"</strong> → Google 계정 1-click</li>
+        <li>설문은 아무거나 넘기면 끝</li>
+      </ol>
+
+      <h2>Claude에게 전체 흐름 물어보기</h2>
+      <div class="prompt">
+<span class="prompt-label">STEP 2 · 복사해서 자기 주소 붙여넣기</span>
+Make 처음 써봐. 아래 주소에서 최근 24시간치 글을
+매일 아침 내 Gmail로 받고 싶어.
+
+주소: [STEP 1에서 받은 주소 붙여넣기]
+
+가입부터 테스트까지 하나하나 알려줘.</div>
+
+      <p class="prompt-note">
+        Claude가 모듈을 어디서 어떻게 추가하는지 단계별로 안내해줘요.
+        화면 보면서 하나씩 따라가면 됩니다. 모르면 캡처 올려서 물어보세요.
+      </p>
+
+      <div class="callout">
+        <span class="label">일단 이 단계의 목표</span>
+        Make에 로그인 → RSS 모듈 + Gmail 모듈 2개가 연결된 상태 만들기.
+        테스트 실행해서 메일이 여러 통 쏟아져도 성공이에요 (다음 STEP에서 묶을 거예요).
+        Make 화면에서 실제로 뭘 누르는지는 <strong>다음 쪽</strong>에 정리해뒀어요.
+      </div>
+
+      <details class="fallback">
+        <summary>좀 더 깎아보기</summary>
+
+        <p><strong>중간에 뭘 눌러야 할지 모를 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 화면 질문</span>
+[지금 화면 스크린샷 올리기]
+여기서 어떻게 해야 해?</div>
+
+        <p><strong>테스트 결과가 이해 안 될 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 결과 해석</span>
+[Run once 결과 스크린샷 올리기]
+이게 제대로 된 거야? 각 항목이 뭘 의미하는지 알려줘.</div>
+      </details>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">STEP 2</span>
+        <span>Make 화면에서 직접 하기</span>
+      </div>
+
+      <h1 class="page-title">Make 화면<br>한 바퀴</h1>
+      <p class="page-sub">
+        Claude 안내를 실제 화면에 놓아보면 이렇게 됩니다.
+        <span class="highlight">동그라미 하나 = 모듈 하나</span>, 왼쪽에서 오른쪽으로 일이 흘러가요.
+      </p>
+
+      <h2>화면 구성</h2>
+      <div class="case-grid">
+        <div class="case-box">
+          <div class="case-when">가운데 넓은 판</div>
+          <div class="case-format">캔버스 — 모듈 놓는 곳</div>
+        </div>
+        <div class="case-box">
+          <div class="case-when">모듈(동그라미) 클릭</div>
+          <div class="case-format">설정 창 — 주소·받는 사람 입력</div>
+        </div>
+        <div class="case-box">
+          <div class="case-when">입력 칸 클릭하면 옆에 뜨는 창</div>
+          <div class="case-format">매핑 패널 — 앞 모듈 결과를 블럭으로 꽂기</div>
+        </div>
+        <div class="case-box">
+          <div class="case-when">화면 왼쪽 아래</div>
+          <div class="case-format">Run once · 시계 · ON — 테스트·예약·켜기</div>
+        </div>
+      </div>
+
+      <h2>① RSS 모듈 — 글 가져오기</h2>
+      <ol>
+        <li>캔버스 가운데 <strong>+</strong> → 검색창에 <strong>RSS</strong></li>
+        <li><strong>Retrieve RSS feed items</strong> 선택</li>
+        <li><strong>URL</strong> 칸에 STEP 1에서 받은 주소 붙여넣기</li>
+        <li>가져올 글 개수는 <strong>10</strong> 정도면 충분 → <strong>OK</strong></li>
+        <li>모듈 우클릭 → <strong>Run this module only</strong> → 글이 들어오는지 확인</li>
+      </ol>
+      <p class="prompt-note">
+        <strong>Watch</strong>는 "새 글이 생길 때마다", <strong>Retrieve</strong>는 "돌릴 때마다 지금 있는 글을 가져오기"예요.
+        하루 한 번 묶어 받는 오늘 방식엔 Retrieve가 맞아요.
+      </p>
+
+      <h2>② Gmail 모듈 — 메일 보내기</h2>
+      <ol>
+        <li>RSS 모듈 오른쪽 반원 클릭 → <strong>Gmail</strong> 검색 → <strong>Send an email</strong></li>
+        <li><strong>Connection</strong> → Add → 내 Google 계정으로 로그인 → 허용</li>
+        <li><strong>To</strong>: 내 Gmail 주소</li>
+        <li><strong>Subject</strong>: 메일 제목 (예: 오늘의 리뷰 모음)</li>
+        <li><strong>Content</strong>: 칸 클릭 → 매핑 패널에서 <strong>Title</strong>, <strong>URL</strong> 블럭을 클릭해서 꽂기</li>
+      </ol>
+
+      <h2>③ 메일 본문은 코드로 써도 돼요</h2>
+      <p>
+        Content 칸은 글자뿐 아니라 <span class="highlight">HTML 코드도 받아요.</span>
+        블럭을 하나하나 꽂는 대신, Claude에게 메일 모양을 코드로 받아 붙여넣고 자리만 블럭으로 바꾸면 끝이에요.
+      </p>
+      <div class="prompt">
+<span class="prompt-label">PROMPT · 메일 모양을 코드로</span>
+Gmail 메일 본문을 제목, 링크, 날짜가 보기 좋게 나오는
+HTML 코드로 만들어줘.
+Make 매핑 블럭 들어갈 자리는 [TITLE 자리], [LINK 자리]
+이런 식으로 표시해줘.</div>
+      <p class="prompt-note">
+        Claude가 준 코드를 Content 칸에 복붙 → [TITLE 자리] 같은 부분만 지우고 그 자리에 매핑 블럭을 꽂으면 돼요.
+        다음 STEP에서 Text aggregator를 넣으면 이 코드는 aggregator 쪽으로 옮겨가요. Claude가 같이 안내해줘요.
+      </p>
+
+      <details class="fallback">
+        <summary>좀 더 깎아보기</summary>
+
+        <p><strong>Subject에 오늘 날짜를 넣고 싶을 때</strong></p>
+        <div class="prompt">
+<span class="prompt-label">PROMPT · 제목에 날짜</span>
+Gmail Subject에 오늘 날짜가 들어가게 하고 싶어.
+2026-11-08 같은 형식으로.</div>
+        <p class="prompt-note" style="margin-top: 12px;">
+          받은 메일 제목에 따옴표가 같이 찍혀 나오면, 그 메일을 캡처해서 Claude에게 보여주세요.
+        </p>
+      </details>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="page-inner">
+      <div class="page-folio">
+        <span class="section-tag">STEP 3</span>
+        <span>Text aggregator 추가</span>
+      </div>
+
+      <h1 class="page-title">메일 한 통으로<br>묶기</h1>
+      <p class="page-sub">
+        지금은 글 개수만큼 메일이 쏟아져요.
+        <span class="highlight">하루 한 통</span>에 다 묶어서 깔끔하게 받으려면 한 모듈을 더 끼워 넣습니다.
+      </p>
+
+      <h2>3-1 한 통으로 묶어달라고 요청</h2>
+      <div class="prompt">
+<span class="prompt-label">STEP 3 · 복사</span>
+지금 메일이 아이템 개수만큼 여러 통 와.
+한 메일에 다 묶어서 하루에 1통만 받고 싶어.
+어떻게 해?</div>
+
+      <p class="prompt-note">
+        Claude가 <strong>Text aggregator</strong>라는 모듈을 RSS와 Gmail 사이에 넣으라고 안내해줘요.
+        따라서 설정하면 돼요.
+      </p>
+
+      <div class="callout">
+        <span class="label">Text aggregator 사용법</span>
+        <p style="margin: 6px 0 10px;"><strong>하는 일</strong> — 여러 개를 하나로 합쳐주는 모듈. RSS가 글 10개를 뱉으면 → 한 덩어리로 묶어 메일 1통에 담아요.</p>
+        <p style="margin: 6px 0 10px;"><strong>위치</strong> — RSS → <strong>[Text aggregator]</strong> → Gmail</p>
+        <p style="margin: 10px 0 6px;"><strong>설정 3가지</strong></p>
+        <ol style="margin: 0 0 10px 18px;">
+          <li><strong>Source Module</strong> → RSS 선택 <em>(필수! 안 하면 안 돌아감)</em></li>
+          <li><strong>Row separator</strong> → <code>New row</code></li>
+          <li><strong>Text</strong> → 아래 템플릿 복붙 후, <code>[...]</code> 자리는 오른쪽 매핑 패널에서 RSS 필드 클릭해서 채우기</li>
+        </ol>
+        <div class="prompt" style="margin: 6px 0 10px;">
+<span class="prompt-label">Text 템플릿</span>
+━━━━━━━━━━
+📌 [Title]
+🔗 [URL]
+
+[Description]
+</div>
+        <p style="margin: 10px 0 6px;"><strong>Gmail 연결</strong> — Gmail 모듈 <strong>Content</strong> 칸에 Text aggregator 출력을 한 번 클릭해서 넣으면 끝.</p>
+        <p style="margin: 10px 0 0;"><strong>안 되면 Claude에게</strong> — "Text aggregator Source Module 어떻게 설정해?" / "결과가 비었어, 원인이 뭐야?" (스크린샷 같이 올리면 더 빠름)</p>
+      </div>
+
+      <h2>3-2 메일 모양 다듬기</h2>
+      <p>메일을 열었을 때 <span class="highlight">어떤 글인지 바로 알 수 있게</span> 포맷을 잡습니다.</p>
+
+      <div class="prompt">
+<span class="prompt-label">PROMPT · 메일 모양</span>
+Gmail 모듈 Content 칸에 뭘 넣어야 할지 알려줘.
+메일 모양은 링크와 제목, 날짜가 나올 수 있게
+표시하는 법을 알려줘.</div>
+
+      <p class="prompt-note">
+        Claude가 Content 칸에 어떤 내용을 넣고, 오른쪽 매핑 패널에서 
+        어떤 블럭을 클릭해서 꽂을지 안내해줘요. 코드로 한 번에 넣는 법은 앞 쪽 ③을 참고하세요.
+      </p>
+
+      <h2>3-3 테스트 → 메일 확인</h2>
+      <p>Make 좌하단 <strong>Run once</strong> → 내 Gmail 받은편지함 열기 → 
+      <strong>메일 한 통</strong>에 글 여러 개가 깔끔하게 들어있으면 완주 성공 🎉</p>
+
+      <div class="callout">
+        <span class="label">여기까지 왔다면</span>
+        Claude가 조사해준 주제의 리뷰·후기가 매일 내 메일로 들어올 준비가 끝났어요.
+        나중에 "매일 아침 8시에 자동으로 돌리고 싶어"라고 Claude에게 한 번 더 물어보면,
+        스케줄까지 설정해서 진짜 자동화가 완성됩니다.
+      </div>
+
+      <details class="fallback">
+        <summary>좀 더 깎아보기</summary>
+
+        <p><strong>모듈 중간에 Text aggregator 끼워 넣기가 어려울 때</strong></p>
+        <p>빈 캔버스에 Text aggregator를 먼저 만들고, 그 모듈을 클릭한 채로 
+        RSS와 Gmail 사이 연결선 위에 드래그해서 놓으면 자동으로 끼워져요.</p>
+
+        <p><strong>매일 아침 8시 자동 발송으로 켜고 싶을 때</strong></p>
+        <p>Make 시나리오 좌하단 시계 아이콘을 눌러서 "Every day"와 시간을 지정한 뒤, 하단 ON 토글을 켜면 됩니다.</p>
+      </details>
+    </div>
+  </section>
+
+</div>
+
+<!-- ── 플립북 UI ── -->
+<div class="book-ui">
+  <div class="page-counter">
+    <input type="number" class="page-input" value="1" min="1" max="6" aria-label="쪽 번호">
+    <span class="total">/ 6</span>
+  </div>
+  <button class="nav-btn prev" aria-label="이전 쪽">◀</button>
+  <button class="nav-btn next" aria-label="다음 쪽">▶</button>
+</div>
+
+<script src="../assets/book.js"></script>
+</body>
+</html>
