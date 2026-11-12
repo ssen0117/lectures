@@ -96,20 +96,20 @@
 
       <h1 class="page-title">강의 지도</h1>
       <p class="page-sub">
-        2일 과정, 네 개 산출물. 각 섹션을 눌러서 플립북으로 열어보세요.
+        1일 과정, 세 개 산출물. 각 섹션을 눌러서 플립북으로 열어보세요.
       </p>
 
       <a class="chapter-link" href="#p8">
-        <span class="num">1 DAY · SYSTEM</span>
-        <span class="title">시스템 만들기</span>
-      </a>
-      <a class="chapter-link" href="#p17">
-        <span class="num">1 DAY · AM</span>
+        <span class="num">AM</span>
         <span class="title">뉴스보드 만들기</span>
       </a>
-      <a class="chapter-link" href="#p27">
-        <span class="num">1 DAY · PM</span>
-        <span class="title">제안서 만들기</span>
+      <a class="chapter-link" href="#p18">
+        <span class="num">PM</span>
+        <span class="title">제안서 시스템 만들기</span>
+      </a>
+      <a class="chapter-link" href="#p29">
+        <span class="num">PM · STEP 10</span>
+        <span class="title">클라이언트별 앱 만들기</span>
       </a>
     </div>
   </section>
@@ -222,7 +222,7 @@
     </div>
   </section>
 
-  <section class="sheet cover">
+  <section hidden class="sheet cover">
     <div class="cover-inner">
       <div class="eyebrow">S E C T I O N  0 1</div>
       <h1>시스템<br>만들기</h1>
@@ -234,7 +234,7 @@
     </div>
   </section>
 
-  <section class="sheet">
+  <section hidden class="sheet">
     <div class="page-inner">
       <div class="page-folio">
         <span class="section-tag">1 DAY · SYSTEM</span>
@@ -267,7 +267,7 @@
     </div>
   </section>
 
-  <section class="sheet">
+  <section hidden class="sheet">
     <div class="page-inner">
       <div class="page-folio">
         <span class="section-tag">STEP 1</span>
@@ -335,7 +335,7 @@ HTML 간단히 쓸 수 있으면 제목은 굵게,
     </div>
   </section>
 
-  <section class="sheet">
+  <section hidden class="sheet">
     <div class="page-inner">
       <div class="page-folio">
         <span class="section-tag">STEP 2</span>
@@ -374,7 +374,7 @@ HTML 간단히 쓸 수 있으면 제목은 굵게,
     </div>
   </section>
 
-  <section class="sheet">
+  <section hidden class="sheet">
     <div class="page-inner">
       <div class="page-folio">
         <span class="section-tag">STEP 3</span>
@@ -418,7 +418,7 @@ HTML 간단히 쓸 수 있으면 제목은 굵게,
     </div>
   </section>
 
-  <section class="sheet">
+  <section hidden class="sheet">
     <div class="page-inner">
       <div class="page-folio">
         <span class="section-tag">STEP 4</span>
@@ -466,7 +466,7 @@ HTML 간단히 쓸 수 있으면 제목은 굵게,
     </div>
   </section>
 
-  <section class="sheet">
+  <section hidden class="sheet">
     <div class="page-inner">
       <div class="page-folio">
         <span class="section-tag">STEP 5</span>
@@ -509,7 +509,7 @@ HTML 간단히 쓸 수 있으면 제목은 굵게,
     </div>
   </section>
 
-  <section class="sheet">
+  <section hidden class="sheet">
     <div class="page-inner">
       <div class="page-folio">
         <span class="section-tag">NEXT</span>
@@ -546,7 +546,7 @@ HTML 간단히 쓸 수 있으면 제목은 굵게,
     </div>
   </section>
 
-  <section class="sheet cover">
+  <section hidden class="sheet cover">
     <div class="cover-inner">
       <div class="eyebrow">1 D A Y</div>
       <h1>1일차<br>워크숍</h1>
@@ -1630,13 +1630,12 @@ A4 1쪽 기준으로 레이아웃 맞춰서 PDF 변환해줘.
 <!-- ── 플립북 UI ── -->
 <div class="book-ui">
   <div class="section-nav">
-    <button type="button" data-page="8">① 시스템 <span class="range">8–15</span></button>
-    <button type="button" data-page="17">② 뉴스보드 <span class="range">17–26</span></button>
-    <button type="button" data-page="27">③ 제안서 <span class="range">27–38</span></button>
+    <button type="button" data-page="8">① 뉴스보드 <span class="range">8–17</span></button>
+    <button type="button" data-page="18">② 제안서 <span class="range">18–32</span></button>
   </div>
   <div class="page-counter">
-    <input type="number" class="page-input" value="1" min="1" max="41" aria-label="쪽 번호">
-    <span class="total">/ 41</span>
+    <input type="number" class="page-input" value="1" min="1" max="32" aria-label="쪽 번호">
+    <span class="total">/ 32</span>
   </div>
   <button class="nav-btn prev" aria-label="이전 쪽">◀</button>
   <button class="nav-btn next" aria-label="다음 쪽">▶</button>
