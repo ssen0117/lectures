@@ -105,3 +105,17 @@
     initCopyButtons();
   }
 })();
+
+/* 모듈 4 STEP 2 — 앱 선택 카드 (카드 클릭 → active + 슬롯 텍스트 변경) */
+(function(){
+  var cards = document.querySelectorAll('.app-card');
+  if (!cards.length) return;
+  var slot = document.querySelector('.app-slot');
+  cards.forEach(function(card){
+    card.addEventListener('click', function(){
+      cards.forEach(function(c){ c.classList.remove('active'); });
+      card.classList.add('active');
+      if (slot) slot.textContent = card.dataset.app;
+    });
+  });
+})();
