@@ -2,14 +2,10 @@
 (function() {
   const book = document.querySelector('.book');
   if (!book) return;
-  const sheets = Array.from(book.querySelectorAll('.sheet:not([hidden])'));
-  // sync static counter/input max with actual visible count
-  const totalEl = document.querySelector('.page-counter .total');
-  if (totalEl) totalEl.textContent = '/ ' + sheets.length;
+  const sheets = Array.from(book.querySelectorAll('.sheet'));
   const prevBtn = document.querySelector('.nav-btn.prev');
   const nextBtn = document.querySelector('.nav-btn.next');
   const pageInput = document.querySelector('.page-counter .page-input');
-  if (pageInput) pageInput.max = sheets.length;
   const sectionBtns = document.querySelectorAll('.section-nav button');
   let current = 0;
 
